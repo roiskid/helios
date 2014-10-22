@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full Width Page
+ * Template Name: Full Width Page (Default)
  *
  * @package WordPress
  * @subpackage WP-Helios
