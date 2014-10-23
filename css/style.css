@@ -988,7 +988,7 @@
 	{
 	}
 	
-		#sidebar > hr.first
+		#sidebar > hr:first-child
 		{
 			display: none;
 		}

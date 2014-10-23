@@ -47,7 +47,6 @@
 	</head>
 
 	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?>>
-
 		<!-- Header -->
 			<div id="header">
 						

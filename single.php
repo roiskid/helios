@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Right Sidebar Page
+ * Template Name: Full Width Page (Default)
  *
  * @package WordPress
  * @subpackage WP-Helios
@@ -8,12 +8,11 @@
  */
 
 get_header(); ?>
-				<div class="main-wrapper-style2">
-					<div class="inner">
-						<div class="container">
-							<div class="row">
-								<div class="8u">
-									<div id="content skel-cell-important">
+
+    <!-- Main -->
+    <div class="wrapper style1">
+        <div class="container">
+
 <?php
 	// Start the Loop.
 	if( have_posts() ) :
@@ -28,23 +27,14 @@ get_header(); ?>
 		endwhile;
 	endif;
 ?>
-									</div>  <!-- #content.skel-cell-important -->
-								</div>  <!-- .8u -->
-								
-								<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-								<div class="4u">
-									<div id="sidebar" class="primary-sidebar widget-area" role="complementary">
 
-										<?php dynamic_sidebar( 'sidebar-1' ); ?>
-								
-									</div>  <!-- #sidebar -->
-								</div>  <!-- .4u -->
-								<?php endif; ?>
-							</div>  <!-- .row -->
-						</div>  <!-- .container -->
-					</div>  <!-- .inner -->
-				</div>  <!-- .main-wrapper-style2 -->
+        <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+                <?php dynamic_sidebar( 'sidebar-1' ); ?>
+        <?php endif; ?>
+
+        </div>  <!-- .container -->
+    </div>  <!-- .wrapper style1 -->
+
 <?php get_template_part( 'loop', 'recent-posts' ); ?>
-			</div>
 
 <?php get_footer(); ?>

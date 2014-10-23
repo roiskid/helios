@@ -35,10 +35,10 @@ function wphelios_widgets_init() {
 		'name'          => __( 'Sidebar', 'wphelios' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Appears in the left or right sidebar section of the site.', 'wphelios' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<hr/><section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<header class="major"><h2 class="widget-title">',
-		'after_title'   => '</h2></header>',
+		'before_title'  => '<header><h3>',
+		'after_title'   => '</h3></header>',
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer 1', 'wphelios' ),
@@ -85,7 +85,8 @@ register_nav_menu( 'Top Nav', 'Primary navigation along the top of the template'
 add_theme_support( 'post-thumbnails' ); 
 add_image_size( 'featured-thumb', 367, 168, true ); 
 add_image_size( 'blog-thumb', 180, 167, true ); 
-add_image_size( 'page-banner', 1200 ); 
+add_image_size( 'sidebar-page-banner', 1200, 357, true );
+add_image_size( 'page-banner', 1200 );
 
 /**
  * Add a theme settings page.
