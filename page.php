@@ -26,7 +26,4 @@ get_header(); ?>
 	endwhile;
 ?>
 
-        </div>  <!-- .container -->
-    </div>  <!-- .wrapper style1 -->
-
 <?php get_footer(); ?>

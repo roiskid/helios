@@ -8,9 +8,8 @@
  * @subpackage WP-Helios
  * @since WP-Helios 1.0
  */
- 
- $wphs_theme_options = get_option( 'wphs_theme_options' );
- $wphs_custom_header = $wphs_theme_options['header_img'];
+$wphelios_theme_options = get_option( 'wphelios_theme_options' );
+$wphelios_custom_header = $wphelios_theme_options['header_img'];
 ?><!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP

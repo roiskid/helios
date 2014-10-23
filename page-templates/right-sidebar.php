@@ -31,7 +31,5 @@ get_header(); ?>
                 <?php dynamic_sidebar( 'sidebar-1' ); ?>
             </div> <!-- .4u -->
         </div> <!-- .row double -->
-    </div>  <!-- .container -->
-</div>  <!-- .wrapper style1 -->
 
 <?php get_footer(); ?>

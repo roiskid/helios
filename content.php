@@ -9,14 +9,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="major">
-		<h2><?php the_title(); ?></h2>
-		<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); if( has_category() ) : _e( 'in ', 'wphelios' ); get_the_category_list( ', ' ); endif; ?></span>
-	</header>  <!-- .major -->
-
+    <header>
+        <h2><a href="#"><?php the_title(); ?></a></h2>
+		<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
+        <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
+        <?php endif; ?>
+    </header>
 	<div class="entry-content">
 		<div class="featured-image">
-			<span class="image image-full">
+			<span>
 <?php
 	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'page-banner' );
