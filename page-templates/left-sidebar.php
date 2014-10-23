@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="4u" id="sidebar">
                 <?php dynamic_sidebar( 'sidebar-1' ); ?>
             </div> <!-- .4u -->
-            <div class="8u" id="content">
+            <div class="8u skel-cell-important" id="content">
                 <?php
                 // Start the Loop.
                 while ( have_posts() ) : the_post();
