@@ -556,7 +556,7 @@
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
-		.button	
+		.button
 		{
 			position: relative;
 			display: inline-block;
@@ -1227,4 +1227,17 @@
     h2.widget-title {
         font-size: 1.25em;
         margin-bottom: .75em;
+    }
+
+    #header .button
+    {
+        text-shadow: 2px 2px 4px #000000;
+        background: none;
+        border: 1px solid #C0C0C0;
+    }
+
+    #header .button:hover
+    {
+        background: rgba(192,192,192,0.25);
+        color: #fff;
     }
