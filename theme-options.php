@@ -190,51 +190,47 @@ function wphelios_theme_options_do_page() {
 			<table class="form-table">
 				<tbody>
 					<tr>
-						<th scope="row"><label class="description" for="wphelios_theme_options[email]"><?php _e( 'Email', 'wphelios' ); ?></label></td>
-						<td><input id="wphelios_theme_options[email]" class="regular-text" type="text" name="wphelios_theme_options[email]" value="<?php esc_attr_e( $options['email'] ); ?>" placeholder="email address" /></td>
+						<th scope="row"><label class="description" for="wphelios_theme_options[social-heading]"><?php _e( 'Social Heading', 'wphelios' ); ?></label></th>
+						<td><input id="wphelios_theme_options[social-heading]" class="regular-text" type="text" name="wphelios_theme_options[social-heading]" value="<?php echo esc_textarea( $options['social-heading'] ); ?>" placeholder="Social heading" /></td>
 					</tr>
 					<tr>
-						<th scope="row"><label class="description" for="wphelios_theme_options[phone]"><?php _e( 'Phone', 'wphelios' ); ?></label></th>
-						<td><input id="wphelios_theme_options[phone]" class="regular-text" type="text" name="wphelios_theme_options[phone]" value="<?php echo esc_textarea( $options['phone'] ); ?>" placeholder="phone number" /></td>
-					</tr>
-					<tr>
-						<th scope="row"><label class="description" for="wphelios_theme_options[address]"><?php _e( 'Address', 'wphelios' ); ?></label></td>
-						<td><textarea id="wphelios_theme_options[address]" class="large-text" cols="30" rows="8" name="wphelios_theme_options[address]"><?php esc_attr_e( $options['address'] ); ?></textarea></td>
+						<th scope="row"><label class="description" for="wphelios_theme_options[social-subheading]"><?php _e( 'Social Subheading', 'wphelios' ); ?></label></td>
+						<td><textarea id="wphelios_theme_options[social-subheading]" class="large-text" cols="30" rows="8" name="wphelios_theme_options[social-subheading]"><?php esc_attr_e( $options['social-subheading'] ); ?></textarea></td>
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[social-link-1-url]"><?php _e( 'Social Link 1', 'wphelios' ); ?></label></td>
 						<td>
-							<input id="wphelios_theme_options[social-link-1-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-1-url]" value="<?php esc_attr_e( $options['social-link-1-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+							<input id="wphelios_theme_options[social-link-1-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-1-url]" value="<?php esc_attr_e( $options['social-link-1-url'] ); ?>" placeholder="Twitter" />
 						</td>
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[social-link-2-url]"><?php _e( 'Social Link 2', 'wphelios' ); ?></label></td>
 						<td>
-							<input id="wphelios_theme_options[social-link-2-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-2-url]" value="<?php esc_attr_e( $options['social-link-2-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+							<input id="wphelios_theme_options[social-link-2-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-2-url]" value="<?php esc_attr_e( $options['social-link-2-url'] ); ?>" placeholder="Facebook" />
 						</td>
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[social-link-4-url]"><?php _e( 'Social Link 3', 'wphelios' ); ?></label></td>
 						<td>
-							<input id="wphelios_theme_options[social-link-3-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-3-url]" value="<?php esc_attr_e( $options['social-link-3-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+							<input id="wphelios_theme_options[social-link-3-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-3-url]" value="<?php esc_attr_e( $options['social-link-3-url'] ); ?>" placeholder="Instagram" />
 						</td>
 					</tr>
                     <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[social-link-4-url]"><?php _e( 'Social Link 4', 'wphelios' ); ?></label></td>
                         <td>
-                            <input id="wphelios_theme_options[social-link-4-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-4-url]" value="<?php esc_attr_e( $options['social-link-4-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+                            <input id="wphelios_theme_options[social-link-4-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-4-url]" value="<?php esc_attr_e( $options['social-link-4-url'] ); ?>" placeholder="Pinterest" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[social-link-5-url]"><?php _e( 'Social Link 5', 'wphelios' ); ?></label></td>
                         <td>
-                            <input id="wphelios_theme_options[social-link-5-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-5-url]" value="<?php esc_attr_e( $options['social-link-5-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+                            <input id="wphelios_theme_options[social-link-5-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-5-url]" value="<?php esc_attr_e( $options['social-link-5-url'] ); ?>" placeholder="Dribbble" />
                         </td>
                     </tr>
                     <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[social-link-6-url]"><?php _e( 'Social Link 4', 'wphelios' ); ?></label></td>
                         <td>
-                            <input id="wphelios_theme_options[social-link-6-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-6-url]" value="<?php esc_attr_e( $options['social-link-6-url'] ); ?>" placeholder="<?php _e( 'link name', 'wphelios' ); ?>" />
+                            <input id="wphelios_theme_options[social-link-6-label]" class="regular-text" type="text" name="wphelios_theme_options[social-link-6-url]" value="<?php esc_attr_e( $options['social-link-6-url'] ); ?>" placeholder="LinkedIn" />
                         </td>
                     </tr>
 				</tbody>

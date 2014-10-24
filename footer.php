@@ -51,70 +51,51 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			<div id="footer">
 				<div class="container">
 					<div class="row">
-						
 						<!-- Footer 1 -->
 							<section class="4u">
-								<header>
-									<h2 class="icon fa-twitter circled"><span class="label">Tweets</span></h2>
-								</header>
                                 <?php if ( is_active_sidebar( 'footer-1' ) ) :
                                     dynamic_sidebar( 'footer-1' );
                                 endif; ?>
 							</section>
-
 						<!-- Footer 2 -->
 							<section class="4u">
-								<header>
-									<h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
-								</header>
                                 <?php if ( is_active_sidebar( 'footer-2' ) ) :
                                     dynamic_sidebar( 'footer-2' );
                                 endif; ?>
 							</section>
-
 						<!-- Footer 3 -->
 							<section class="4u">
-								<header>
-									<h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
-								</header>
                                 <?php if ( is_active_sidebar( 'footer-3' ) ) :
                                     dynamic_sidebar( 'footer-3' );
                                 endif; ?>
 							</section>
-
 					</div>
 					<hr />
 					<div class="row">
 						<div class="12u">
-							
-							<!-- Contact -->
+							<!-- Social -->
 								<section class="contact">
-									<header>
-										<h3>Nisl turpis nascetur interdum?</h3>
-									</header>
-									<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+                                    <?php if (!empty($wphelios_theme_options['social-heading'])) : ?><header><h3><?php echo $wphelios_theme_options['social-heading']; ?></h3></header><?php endif; ?>
+                                    <?php if (!empty($wphelios_theme_options['social-subheading'])) : ?><p><?php echo $wphelios_theme_options['social-subheading']; ?></p><?php endif; ?>
 									<ul class="icons">
-										<li><a href="<?php echo $wphelios_theme_options['social-link-1-url']; ?>" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="<?php echo $wphelios_theme_options['social-link-2-url']; ?>" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="<?php echo $wphelios_theme_options['social-link-3-url']; ?>" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="<?php echo $wphelios_theme_options['social-link-4-url']; ?>" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-										<li><a href="<?php echo $wphelios_theme_options['social-link-5-url']; ?>" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="<?php echo $wphelios_theme_options['social-link-6-url']; ?>" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                                        <?php if (!empty($wphelios_theme_options['social-link-1-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-1-url']; ?>" class="icon fa-twitter"><span class="label">Twitter</span></a></li><?php endif; ?>
+                                        <?php if (!empty($wphelios_theme_options['social-link-2-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-2-url']; ?>" class="icon fa-facebook"><span class="label">Facebook</span></a></li><?php endif; ?>
+                                        <?php if (!empty($wphelios_theme_options['social-link-3-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-3-url']; ?>" class="icon fa-instagram"><span class="label">Instagram</span></a></li><?php endif; ?>
+                                        <?php if (!empty($wphelios_theme_options['social-link-4-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-4-url']; ?>" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li><?php endif; ?>
+                                        <?php if (!empty($wphelios_theme_options['social-link-5-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-5-url']; ?>" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li><?php endif; ?>
+                                        <?php if (!empty($wphelios_theme_options['social-link-6-url'])) : ?><li><a href="<?php echo $wphelios_theme_options['social-link-6-url']; ?>" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li><?php endif; ?>
 									</ul>
 								</section>
-							
 							<!-- Copyright -->
 								<div class="copyright">
 									<ul class="menu">
-										<li>&copy; Untitled. All rights reserved.</li>
-                                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                                        <li>Theme: <a href="http://www.netural.nl">Netural</a></li>
-                                        <li>Demo Images: <a href="http://md.photomerchant.net/">Michael Domaradzki</a></li>
+										<li>&copy; Copyright <?php echo date('Y'); ?>, by <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>. All rights reserved.</li>
+                                        <li>Design: <a href="//html5up.net" target="_blank" title="Design">HTML5 UP</a></li>
+                                        <li>Theme: <a href="//www.netural.nl" target="_blank" title="Theme">Netural</a></li>
+                                        <li>Demo Images: <a href="//md.photomerchant.net/" target="_blank" title="Demo images">Michael Domaradzki</a></li>
 									</ul>
 								</div>
-							
 						</div>
-					
 					</div>
 				</div>
 			</div>
