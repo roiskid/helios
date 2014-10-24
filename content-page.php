@@ -10,7 +10,7 @@
 
 <article id="main" <?php if ( strpos(get_page_template(), 'sidebar') === false ) : ?>class="special"<?php endif; ?>>
 	<header>
-		<h2><a href="#"><?php the_title(); ?></a></h2>
+		<h2><?php the_title(); ?></h2>
 <?php
 $subheading = get_post_meta( get_the_ID(), '_subheading', true );
 if( !empty( $subheading ) ) :

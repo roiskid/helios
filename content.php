@@ -8,9 +8,19 @@
  */
 ?>
 
+<?php if ( !is_single() ) : ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('special'); ?>>
+<?php else: ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php endif; ?>
     <header>
-        <h2><a href="#"><?php the_title(); ?></a></h2>
+        <?php
+        if ( is_single() ) :
+            the_title( '<h2 class="entry-title">', '</h2>' );
+        else :
+            the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+        endif;
+        ?>
 		<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
         <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
         <?php endif; ?>
@@ -28,6 +38,11 @@
 <?php
 the_content();
 
+if ( !is_single() ) : ?>
+<footer><a class="button" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Continue Reading', 'wphelios' ); ?></a></footer>
+<?php endif; ?>
+
+<?php
 if( has_tag() ):
 ?>
 		<div class="post-meta">

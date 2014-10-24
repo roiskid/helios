@@ -50,7 +50,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 				<!-- Inner -->
 					<div class="inner">
 						<header>
-                            <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/" id="logo"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><hr /><?php endif; ?>
+                            <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/" id="logo"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><?php if (is_home()) : ?><hr /><?php endif; ?><?php endif; ?>
 							<?php if (is_home() && !empty($wphelios_theme_options['home-subheading'])) : ?><p><?php echo $wphelios_theme_options['home-subheading']; ?></p><?php endif; ?>
 						</header>
 						<?php if( is_home() ) { ?>
