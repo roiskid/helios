@@ -13,34 +13,19 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
                 <hr>
                 <div class="row">
                     <article class="4u special">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic07.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Gravida aliquam penatibus</a></h3>
-                        </header>
-                        <p>
-                            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-                            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-                        </p>
+                        <?php if ( is_active_sidebar( 'footer-1' ) ) :
+                            dynamic_sidebar( 'footer-1' );
+                        endif; ?>
                     </article>
                     <article class="4u special">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic08.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
-                        </header>
-                        <p>
-                            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-                            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-                        </p>
+                        <?php if ( is_active_sidebar( 'footer-2' ) ) :
+                            dynamic_sidebar( 'footer-2' );
+                        endif; ?>
                     </article>
                     <article class="4u special">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic09.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Magna laoreet et aliquam</a></h3>
-                        </header>
-                        <p>
-                            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-                            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-                        </p>
+                        <?php if ( is_active_sidebar( 'footer-3' ) ) :
+                            dynamic_sidebar( 'footer-3' );
+                        endif; ?>
                     </article>
                 </div>
 
@@ -53,20 +38,20 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 					<div class="row">
 						<!-- Footer 1 -->
 							<section class="4u">
-                                <?php if ( is_active_sidebar( 'footer-1' ) ) :
-                                    dynamic_sidebar( 'footer-1' );
+                                <?php if ( is_active_sidebar( 'footer-4' ) ) :
+                                    dynamic_sidebar( 'footer-4' );
                                 endif; ?>
 							</section>
 						<!-- Footer 2 -->
 							<section class="4u">
-                                <?php if ( is_active_sidebar( 'footer-2' ) ) :
-                                    dynamic_sidebar( 'footer-2' );
+                                <?php if ( is_active_sidebar( 'footer-5' ) ) :
+                                    dynamic_sidebar( 'footer-5' );
                                 endif; ?>
 							</section>
 						<!-- Footer 3 -->
 							<section class="4u">
-                                <?php if ( is_active_sidebar( 'footer-3' ) ) :
-                                    dynamic_sidebar( 'footer-3' );
+                                <?php if ( is_active_sidebar( 'footer-6' ) ) :
+                                    dynamic_sidebar( 'footer-6' );
                                 endif; ?>
 							</section>
 					</div>

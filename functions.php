@@ -43,7 +43,7 @@ function wphelios_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer 1', 'wphelios' ),
 		'id'            => 'footer-1',
-		'description'   => __( 'Appears in the left footer section of the site.', 'wphelios' ),
+		'description'   => __( 'Appears in the left upper footer section of the site.', 'wphelios' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -52,7 +52,7 @@ function wphelios_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer 2', 'wphelios' ),
 		'id'            => 'footer-2',
-		'description'   => __( 'Appears in the middle footer section of the site.', 'wphelios' ),
+		'description'   => __( 'Appears in the middle upper footer section of the site.', 'wphelios' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -61,12 +61,39 @@ function wphelios_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer 3', 'wphelios' ),
 		'id'            => 'footer-3',
-		'description'   => __( 'Appears in the right footer section of the site.', 'wphelios' ),
+		'description'   => __( 'Appears in the right upper footer section of the site.', 'wphelios' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+    register_sidebar( array(
+        'name'          => __( 'Footer 4', 'wphelios' ),
+        'id'            => 'footer-4',
+        'description'   => __( 'Appears in the left bottom footer section of the site.', 'wphelios' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Footer 5', 'wphelios' ),
+        'id'            => 'footer-5',
+        'description'   => __( 'Appears in the middle bottom footer section of the site.', 'wphelios' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Footer 6', 'wphelios' ),
+        'id'            => 'footer-6',
+        'description'   => __( 'Appears in the right bottom footer section of the site.', 'wphelios' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'wphelios_widgets_init' );
 
