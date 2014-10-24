@@ -1221,3 +1221,10 @@
 			{
 				text-align: center;
 			}
+
+    /* Netural.nl WP-Helios theme */
+
+    h2.widget-title {
+        font-size: 1.25em;
+        margin-bottom: .75em;
+    }

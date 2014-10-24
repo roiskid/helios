@@ -9,7 +9,6 @@
  * @since WP-Helios 1.0
  */
 $wphelios_theme_options = get_option( 'wphelios_theme_options' );
-$wphelios_custom_header = $wphelios_theme_options['header_img'];
 ?><!DOCTYPE HTML>
 <!--
 	Helios by HTML5 UP
@@ -47,29 +46,21 @@ $wphelios_custom_header = $wphelios_theme_options['header_img'];
 
 	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?>>
 		<!-- Header -->
-			<div id="header">
-						
+			<div id="header"<?php if (!empty($wphelios_theme_options['header-img'])) : ?> style="background-image: url('<?php echo $wphelios_theme_options['header-img']; ?>');"<?php endif; ?>>
 				<!-- Inner -->
 					<div class="inner">
 						<header>
-							<h1><a href="/" id="logo">Helios</a></h1>
-							<?php if( is_home() ) { ?>
-							<hr />
-							<p>Another fine freebie by HTML5 UP</p>
-							<?php } ?>
+                            <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/" id="logo"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><hr /><?php endif; ?>
+							<?php if (is_home() && !empty($wphelios_theme_options['home-subheading'])) : ?><p><?php echo $wphelios_theme_options['home-subheading']; ?></p><?php endif; ?>
 						</header>
 						<?php if( is_home() ) { ?>
 						<footer>
-							<a href="#banner" class="button circled scrolly">Start</a>
+							<a href="#banner" class="button circled scrolly"><?php if (!empty($wphelios_theme_options['home-button-label'])) : echo $wphelios_theme_options['home-button-label']; else: echo 'Start'; endif; ?></a>
 						</footer>
 						<?php } ?>
 					</div>
-				
 				<!-- Nav -->
 					<nav id="nav">
                         <?php wp_nav_menu( array( 'theme_location' => 'Top Nav', 'container' => '', 'menu_class' => '' ) ); ?>
 					</nav>
-
 			</div>
-
-
