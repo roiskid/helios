@@ -55,10 +55,17 @@ function wphelios_theme_options_do_page() {
 
 			<table class="form-table">
 				<tbody>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[header-logo]"><?php _e( 'Header Background Image', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[header-logo]" class="regular-text" type="text" name="wphelios_theme_options[header-logo]" value="<?php echo esc_url( $options['header-logo'] ); ?>" />
+                            <input id="upload_header_logo" type="button" class="button" value="<?php _e( 'Upload Logo', 'wphelios' ); ?>" />
+                        </td>
+                    </tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[header-img]"><?php _e( 'Header Background Image', 'wphelios' ); ?></label></td>
 						<td>
-							<input id="wphelios_theme_options[header_img]" class="regular-text" type="text" name="wphelios_theme_options[header-img]" value="<?php echo esc_url( $options['header-img'] ); ?>" />
+							<input id="wphelios_theme_options[header-img]" class="regular-text" type="text" name="wphelios_theme_options[header-img]" value="<?php echo esc_url( $options['header-img'] ); ?>" />
 							<input id="upload_header_img_button" type="button" class="button" value="<?php _e( 'Upload Image', 'wphelios' ); ?>" />
 							<span class="description"><?php _e('Ideal size is 1920x1080', 'wphelios' ); ?></span>
 						</td>
@@ -83,6 +90,17 @@ function wphelios_theme_options_do_page() {
 
 			<script>
 			jQuery(document).ready(function($) {
+                $('#upload_header_logo').click(function() {
+                    tb_show('Upload a header logo', 'media-upload.php?TB_iframe=true', false);
+
+                    window.send_to_editor = function(html) {
+                        var image_url = $('img',html).attr('src');
+                        $('#upload_header_logo').prev('input').val(image_url);
+                        tb_remove();
+                    }
+
+                    return false;
+                });
 				$('#upload_header_img_button').click(function() {
 					tb_show('Upload a header image', 'media-upload.php?TB_iframe=true', false);
 
