@@ -1230,6 +1230,8 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 1em;
+        -webkit-filter: drop-shadow(0 5px 5px #000);
+        filter: drop-shadow(0 5px 5px #000);
     }
 
     .container article.type-post:first-child {
