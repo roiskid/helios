@@ -9,6 +9,8 @@
  * @since WP-Helios 1.0
  */
 
+$wphelios_theme_options = get_option( 'wphelios_theme_options' );
+
 get_header(); ?>
 
         <!-- Banner -->
@@ -22,89 +24,33 @@ get_header(); ?>
         <!-- Carousel -->
             <section class="carousel">
                 <div class="reel" style="overflow: visible; transform: translate(0px, 0px);">
+                    <?php
+                    $cats_selected = implode(',', $wphelios_theme_options['carousel-category']);
+                    $args = array(
+                    'cat' => $cats_selected,
+                    'post_type' => array( 'page' ));
+                    query_posts( $args );
 
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic01.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Pulvinar sagittis congue</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic02.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Fermentum sagittis proin</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic03.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic04.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Ultrices urna sit lobortis</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic05.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Varius magnis sollicitudin</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic01.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Pulvinar sagittis congue</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic02.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Fermentum sagittis proin</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic03.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic04.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Ultrices urna sit lobortis</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
-                    <article class="">
-                        <a href="#" class="image featured"><img src="<?php echo get_template_directory_uri(); ?>/images/pic05.jpg" alt=""></a>
-                        <header>
-                            <h3><a href="#">Varius magnis sollicitudin</a></h3>
-                        </header>
-                        <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-                    </article>
-
+                    if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <?php
+                        if (is_category('3') ) :
+                        $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                        $feat_image_title = get_post(get_post_thumbnail_id($post->ID))->post_title;
+                        $subheading = get_post_meta( get_the_ID(), '_subheading', true );
+                        ?>
+                        <article class="">
+                            <a href="<?php the_permalink() ?>" class="image featured"><img src="<?=$feat_image?>" alt="<?=$feat_image_title?>"></a>
+                            <header>
+                                <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                            </header>
+                            <p><?=$subheading?></p>
+                        </article>
+                        <?php endif; ?>
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>
                 </div>
-                <span class="forward" style="display: inline;"></span><span class="backward" style="display: inline;"></span>
+                <span class="forward" style="display: inline;"></span>
+                <span class="backward" style="display: inline;"></span>
             </section>
 
 		<!-- Main -->

@@ -151,3 +151,13 @@ function hex2rgb($hex) {
     $rgb = array($r, $g, $b);
     return implode(",", $rgb); // returns the rgb values separated by commas
 }
+
+/**
+ * Add category metabox to page
+ * Add tag metabox to page
+ */
+function wphelios_page_cats_and_tags() {
+    register_taxonomy_for_object_type('post_tag', 'page');
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action( 'admin_init', 'wphelios_page_cats_and_tags' );

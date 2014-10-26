@@ -140,9 +140,21 @@ function wphelios_theme_options_do_page() {
 						<th scope="row"><label class="description" for="wphelios_theme_options[home-button-label]"><?php _e( 'Button Label', 'wphelios' ); ?></label></td>
 						<td>
 							<input id="wphelios_theme_options[home-button-label]" class="regular-text" type="text" name="wphelios_theme_options[home-button-label]" value="<?php esc_attr_e( $options['home-button-label'] ); ?>" />
-							<span class="description"></span>
 						</td>
 					</tr>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[carousel-category]"><?php _e( 'Carousel Categories', 'wphelios' ); ?></label></td>
+                        <td>
+                            <select name="wphelios_theme_options[carousel-category][]" id="wphelios_theme_options[carousel-category]" multiple="multiple" size="4">
+                                <?php
+                                $cats_selected = $options['carousel-category'];
+                                $categories = get_categories();
+                                foreach ( $categories as $category) : ?>
+                                    <option value="<?php echo $category->cat_ID; ?>" <?php if ( $cats_selected && in_array( $category->cat_ID, $cats_selected ) ) { echo 'selected="selected"'; }?>><?php echo $category->cat_name; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </td>
+                    </tr>
 				</tbody>
 			</table>
 
