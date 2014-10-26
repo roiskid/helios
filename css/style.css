@@ -1237,6 +1237,7 @@
     #header header p {
         -webkit-filter: drop-shadow(0 2px 2px #000);
         filter: drop-shadow(0 2px 2px #000);
+        font-weight: bold;
     }
 
     .container article.type-post:first-child {
