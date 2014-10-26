@@ -56,7 +56,7 @@ function wphelios_theme_options_do_page() {
 			<table class="form-table">
 				<tbody>
                     <tr>
-                        <th scope="row"><label class="description" for="wphelios_theme_options[header-logo]"><?php _e( 'Header Background Image', 'wphelios' ); ?></label></td>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[header-logo]"><?php _e( 'Header Background Logo', 'wphelios' ); ?></label></td>
                         <td>
                             <input id="wphelios_theme_options[header-logo]" class="regular-text" type="text" name="wphelios_theme_options[header-logo]" value="<?php echo esc_url( $options['header-logo'] ); ?>" />
                             <input id="upload_header_logo" type="button" class="button" value="<?php _e( 'Upload Logo', 'wphelios' ); ?>" />
@@ -70,6 +70,12 @@ function wphelios_theme_options_do_page() {
 							<span class="description"><?php _e('Ideal size is 1920x1080', 'wphelios' ); ?></span>
 						</td>
 					</tr>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo esc_url( $options['color'] ); ?>" data-default-color="#df7366" />
+                        </td>
+                    </tr>
 				</tbody>
 			</table>
 
@@ -90,6 +96,9 @@ function wphelios_theme_options_do_page() {
 
 			<script>
 			jQuery(document).ready(function($) {
+
+                $('.color-field').wpColorPicker();
+
                 $('#upload_header_logo').click(function() {
                     tb_show('Upload a header logo', 'media-upload.php?TB_iframe=true', false);
 

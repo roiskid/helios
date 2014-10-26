@@ -126,3 +126,28 @@ require_once ( get_stylesheet_directory() . '/theme-options.php' );
  * @since WP-Helios 1.0
  */
 require_once ( get_stylesheet_directory() . '/page-options.php' );
+
+/**
+ * Theme color
+ */
+add_action( 'admin_enqueue_scripts', 'wphelios_color_picker' );
+function wphelios_color_picker() {
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'wp-color-picker' );
+}
+
+function hex2rgb($hex) {
+    $hex = str_replace("#", "", $hex);
+
+    if(strlen($hex) == 3) {
+        $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+        $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+        $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+    } else {
+        $r = hexdec(substr($hex,0,2));
+        $g = hexdec(substr($hex,2,2));
+        $b = hexdec(substr($hex,4,2));
+    }
+    $rgb = array($r, $g, $b);
+    return implode(",", $rgb); // returns the rgb values separated by commas
+}

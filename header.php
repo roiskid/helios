@@ -42,6 +42,43 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		<!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie/v8.css" /><![endif]-->
 
 		<?php wp_head(); ?>
+
+        <style>
+            input[type="button"],
+            input[type="submit"],
+            input[type="reset"],
+            .button {
+                background: <?php echo $wphelios_theme_options['color']; ?>;
+            }
+            input[type="button"]:hover,
+            input[type="submit"]:hover,
+            input[type="reset"]:hover,
+            .button:hover
+            {
+                background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+            }
+            .dropotron li:hover
+            {
+                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+            }
+            ul.icons li a:hover
+            {
+                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+            }
+            a:hover
+            {
+                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+            }
+            .carousel .forward:hover:before,
+            .carousel .backward:hover:before
+            {
+                background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+            }
+            form textarea:focus
+            {
+                border-color: <?php echo $wphelios_theme_options['color']; ?>;
+            }
+        </style>
 	</head>
 
 	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?>>
