@@ -1234,6 +1234,11 @@
         filter: drop-shadow(0 5px 5px #000);
     }
 
+    #header header p {
+        -webkit-filter: drop-shadow(0 2px 2px #000);
+        filter: drop-shadow(0 2px 2px #000);
+    }
+
     .container article.type-post:first-child {
         padding-top: 3em;
     }
