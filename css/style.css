@@ -1240,8 +1240,8 @@
         font-weight: bold;
     }
 
-    .container article.type-post:first-child {
-        padding-top: 3em;
+    .wrapper {
+        padding: 3em;
     }
 
     h2.widget-title {
