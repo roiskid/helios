@@ -10,11 +10,6 @@
  */
 $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 ?><!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
