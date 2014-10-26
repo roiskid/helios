@@ -33,7 +33,6 @@ get_header(); ?>
 
                     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <?php
-                        if (is_category('3') ) :
                         $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                         $feat_image_title = get_post(get_post_thumbnail_id($post->ID))->post_title;
                         $subheading = get_post_meta( get_the_ID(), '_subheading', true );
@@ -45,7 +44,6 @@ get_header(); ?>
                             </header>
                             <p><?=$subheading?></p>
                         </article>
-                        <?php endif; ?>
                     <?php endwhile; endif; ?>
                     <?php wp_reset_query(); ?>
                 </div>
