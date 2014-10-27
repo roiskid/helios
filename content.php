@@ -8,6 +8,8 @@
  */
 ?>
 
+<hr />
+
 <?php if ( !is_single() ) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('special'); ?>>
 <?php else: ?>

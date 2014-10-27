@@ -11,12 +11,10 @@
 <article id="main" <?php if ( strpos(get_page_template(), 'sidebar') === false ) : ?>class="special"<?php endif; ?>>
 	<header>
 		<h2><?php the_title(); ?></h2>
-<?php
-$subheading = get_post_meta( get_the_ID(), '_subheading', true );
-if( !empty( $subheading ) ) :
-?>
+        <?php $subheading = get_post_meta( get_the_ID(), '_subheading', true );
+        if( !empty( $subheading ) ) : ?>
 		<p><?php echo $subheading; ?></p>
-<?php endif; ?>
+        <?php endif; ?>
 	</header>
     <?php if (has_post_thumbnail()) : ?>
     <a href="#" class="image featured">

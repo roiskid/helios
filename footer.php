@@ -10,7 +10,8 @@
  */
 $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 ?>
-                <hr>
+                <hr />
+
                 <div class="row">
                     <article class="4u special">
                         <?php if ( is_active_sidebar( 'footer-1' ) ) :

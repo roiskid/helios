@@ -1222,7 +1222,7 @@
 				text-align: center;
 			}
 
-    /* Netural.nl WP-Helios theme */
+    /* WP-Helios theme */
 
     #logo img {
         width: 200px;
@@ -1230,22 +1230,20 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 1em;
-        -webkit-filter: drop-shadow(0 5px 5px #000);
-        filter: drop-shadow(0 5px 5px #000);
+        /* -webkit-filter: drop-shadow(0 5px 5px #000); */
+        /* filter: drop-shadow(0 5px 5px #000); */
     }
 
+    /*
     #header header p {
         -webkit-filter: drop-shadow(0 2px 2px #000);
         filter: drop-shadow(0 2px 2px #000);
         font-weight: bold;
     }
+    */
 
     .wrapper {
         padding: 3em;
-    }
-
-    .home .container {
-        padding-top: 3em;
     }
 
     h2.widget-title {
@@ -1254,6 +1252,25 @@
     }
 
     footer {
-        text-align: center; !important
+        text-align: center !important;
     }
 
+    section, article {
+        margin-bottom: 0;
+    }
+
+    .copyright {
+        margin-top: 3em;
+    }
+
+    .home .container {
+        padding-top: 3em;
+    }
+
+    #comments {
+        margin-top: 3em;
+    }
+
+    div.container hr:first-child {
+        display: none;
+    }

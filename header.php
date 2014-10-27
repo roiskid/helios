@@ -12,11 +12,12 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 ?><!DOCTYPE HTML>
 <html>
 	<head>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 		<meta name="keywords" content="">
+		<meta name="theme" content="WP-Helios">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
