@@ -17,7 +17,6 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 		<meta name="keywords" content="">
-		<meta name="theme" content="WP-Helios">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -83,8 +82,12 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 				<!-- Inner -->
 					<div class="inner">
 						<header>
-                            <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></div><?php endif; ?>
-                            <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/" id="logo"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><?php if (is_home()) : ?><hr /><?php endif; ?><?php endif; ?>
+                            <?php if (is_home()) : ?>
+                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></div><?php endif; ?>
+                            <?php else: ?>
+                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><a href="/"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></a></div><?php endif; ?>
+                            <?php endif; ?>
+                            <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><?php if (is_home()) : ?><hr /><?php endif; ?><?php endif; ?>
 							<?php if (is_home() && !empty($wphelios_theme_options['home-subheading'])) : ?><p><?php echo $wphelios_theme_options['home-subheading']; ?></p><?php endif; ?>
 						</header>
 						<?php if( is_home() ) { ?>

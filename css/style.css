@@ -1275,3 +1275,11 @@
     div.container hr:first-child {
         display: none;
     }
+
+    .carousel article {
+        display: inline-table;
+    }
+
+    .carousel article p {
+        min-height: 5em;
+    }

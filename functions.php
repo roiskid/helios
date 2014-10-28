@@ -161,23 +161,3 @@ function wphelios_page_cats_and_tags() {
     register_taxonomy_for_object_type('category', 'page');
 }
 add_action( 'admin_init', 'wphelios_page_cats_and_tags' );
-
-/**
- * for removing cdn files, anti metadata
- */
-function deregister_styles() {
-
-}
-add_action('wp_enqueue_scripts', 'deregister_styles', 100);
-
-function login_deregister_styles() {
-    wp_deregister_style('open-sans');
-    wp_register_style('open-sans', false);
-}
-add_action('login_init', 'login_deregister_styles', 100);
-
-function admin_deregister_styles() {
-    wp_deregister_style('open-sans');
-    wp_register_style('open-sans', false);
-}
-add_action('admin_init', 'admin_deregister_styles', 100);
