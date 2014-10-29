@@ -20,50 +20,66 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+		<!--[if lte IE 8]><script src="<?php echo get_template_directory_uri(); ?>/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.dropotron.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrolly.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.onvisible.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/skel.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/skel-layers.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/skel.css" />
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-desktop.css" />
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie/v8.css" /><![endif]-->
+
 		<?php wp_head(); ?>
 
-        <style>
-            input[type="button"],
-            input[type="submit"],
-            input[type="reset"],
-            .button {
-                background: <?php echo $wphelios_theme_options['color']; ?>;
-            }
-            input[type="button"]:hover,
-            input[type="submit"]:hover,
-            input[type="reset"]:hover,
-            .button:hover
-            {
-                background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
-            }
-            .dropotron li:hover
-            {
-                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
-            }
-            ul.icons li a:hover
-            {
-                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
-            }
-            a:hover
-            {
-                color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
-            }
-            .carousel .forward:hover:before,
-            .carousel .backward:hover:before
-            {
-                background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
-            }
-            form textarea:focus
-            {
-                border-color: <?php echo $wphelios_theme_options['color']; ?>;
-            }
-            .homepage #header .overlay {
-	            background: <?php echo $wphelios_theme_options['color']; ?>;
-            }
-            #footer .icon.circled {
-	            color: <?php echo $wphelios_theme_options['color']; ?>;
-            }
-        </style>
+		<style>
+			input[type="button"],
+			input[type="submit"],
+			input[type="reset"],
+			.button {
+				background: <?php echo $wphelios_theme_options['color']; ?> !important ;
+			}
+			input[type="button"]:hover,
+			input[type="submit"]:hover,
+			input[type="reset"]:hover,
+			.button:hover
+			{
+				background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
+			}
+			.dropotron li:hover
+			{
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+			}
+			ul.icons li a:hover
+			{
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+			}
+			a:hover
+			{
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+			}
+			.carousel .forward:hover:before,
+			.carousel .backward:hover:before
+			{
+				background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+			}
+			form textarea:focus
+			{
+				border-color: <?php echo $wphelios_theme_options['color']; ?>;
+			}
+			.homepage #header .overlay {
+				background: <?php echo $wphelios_theme_options['color']; ?>;
+			}
+			#footer .button.circled {
+				color: <?php echo $wphelios_theme_options['color']; ?>;
+			}
+		</style>
 	</head>
 
 	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?>>
