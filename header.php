@@ -60,6 +60,9 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
             .homepage #header .overlay {
 	            background: <?php echo $wphelios_theme_options['color']; ?>;
             }
+            #footer .icon.circled {
+	            color: <?php echo $wphelios_theme_options['color']; ?>;
+            }
         </style>
 	</head>
 
