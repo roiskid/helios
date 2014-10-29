@@ -20,14 +20,6 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-		<!--[if lte IE 8]><script src="<?php echo get_template_directory_uri(); ?>/css/ie/html5shiv.js"></script><![endif]-->
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.dropotron.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrolly.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.onvisible.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/skel.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/skel-layers.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/skel.css" />
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
