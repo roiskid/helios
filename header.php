@@ -43,14 +43,14 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			input[type="submit"],
 			input[type="reset"],
 			.button {
-				background: <?php echo $wphelios_theme_options['color']; ?> !important ;
+				background-color: <?php echo $wphelios_theme_options['color']; ?> !important ;
 			}
 			input[type="button"]:hover,
 			input[type="submit"]:hover,
 			input[type="reset"]:hover,
 			.button:hover
 			{
-				background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
+				background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
 			}
 			.dropotron li:hover
 			{
@@ -73,8 +73,8 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			{
 				border-color: <?php echo $wphelios_theme_options['color']; ?>;
 			}
-			.eepage #header .overlay {
-				background: <?php echo $wphelios_theme_options['color']; ?>;
+			#header .overlay {
+				background-color: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
 			#footer .button.circled {
 				color: <?php echo $wphelios_theme_options['color']; ?>;
