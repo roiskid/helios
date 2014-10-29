@@ -15,7 +15,7 @@
 
 	body
 	{
-		background: #f0f4f4;
+		background: #454342;
 		color: #5b5b5b;
 	}
 
@@ -708,7 +708,7 @@
 			.homepage #header .overlay
 			{
 				content: '';
-				background: #1C0920;
+				background: #00749a;
 				display: block;
 				position: absolute;
 				left: 0;
@@ -1028,14 +1028,14 @@
 		position: relative;
 		overflow: hidden;
 		padding: 6em 0 6em 0;
-		background: #2b252c;
+		background: #454342;
 		color: #fff;
 	}
 
 		#footer .icon.circled
 		{
 			background: #fff;
-			color: #2b252c;
+			color: #00749a;
 		}
 
 		#footer header
@@ -1123,7 +1123,7 @@
 				width: 6em;
 				height: 6em;
 				border-radius: 100%;
-				background-color: rgba(72,57,73, 0.5);				
+				background-color: rgba(70,67,66, 0.5);
 				position: absolute;
 				top: 50%;
 				margin-top: -3em;

@@ -80,7 +80,7 @@ function wphelios_theme_options_do_page() {
                     <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
                         <td>
-                            <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo esc_url( $options['color'] ); ?>" data-default-color="#df7366" />
+                            <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo esc_url( $options['color'] ); ?>" data-default-color="#00749a" />
                         </td>
                     </tr>
 				</tbody>
