@@ -16,7 +16,11 @@ get_header(); ?>
         <!-- Banner -->
             <section id="banner">
                 <header>
-                    <h2><?php bloginfo( 'name' ); ?></h2>
+	                <?php if (!empty($wphelios_theme_options['home-logo'])) : ?>
+		                <div id="home_logo"><img src="<?php echo $wphelios_theme_options['home-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></div>
+	                <?php else: ?>
+		                <h2><?php bloginfo( 'name' ); ?></h2>
+                    <?php endif; ?>
                     <p><?php bloginfo( 'description' ); ?></p>
                 </header>
             </section>

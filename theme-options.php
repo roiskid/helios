@@ -71,6 +71,13 @@ function wphelios_theme_options_do_page() {
 						</td>
 					</tr>
                     <tr>
+	                    <th scope="row"><label class="description" for="wphelios_theme_options[home-logo]"><?php _e( 'Homepage Logo', 'wphelios' ); ?></label></td>
+	                    <td>
+		                    <input id="wphelios_theme_options[home-logo]" class="regular-text" type="text" name="wphelios_theme_options[home-logo]" value="<?php echo esc_url( $options['home-logo'] ); ?>" />
+		                    <input id="upload_home_logo" type="button" class="button" value="<?php _e( 'Upload Logo', 'wphelios' ); ?>" />
+	                    </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
                         <td>
                             <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo esc_url( $options['color'] ); ?>" data-default-color="#df7366" />
@@ -116,6 +123,17 @@ function wphelios_theme_options_do_page() {
 					window.send_to_editor = function(html) {
 						var image_url = $('img',html).attr('src');
 						$('#upload_header_img_button').prev('input').val(image_url);
+						tb_remove();
+					}
+
+					return false;
+				});
+				$('#upload_home_logo').click(function() {
+					tb_show('Upload a homepage logo', 'media-upload.php?TB_iframe=true', false);
+
+					window.send_to_editor = function(html) {
+						var image_url = $('img',html).attr('src');
+						$('#upload_home_logo').prev('input').val(image_url);
 						tb_remove();
 					}
 
