@@ -73,7 +73,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			{
 				border-color: <?php echo $wphelios_theme_options['color']; ?>;
 			}
-			.homepage #header .overlay {
+			.eepage #header .overlay {
 				background: <?php echo $wphelios_theme_options['color']; ?>;
 			}
 			#footer .button.circled {

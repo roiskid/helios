@@ -354,7 +354,7 @@
 				ul.menu li
 				{
 					display: inline-block;
-					border-left: solid 1px rgba(128,128,128,0.2);
+					border-left: solid 1px rgba(128,128,128,0.25);
 					padding-left: 1.25em;
 					margin-left: 1.25em;
 				}
@@ -369,7 +369,7 @@
 			ul.icons
 			{
 				position: relative;
-				background: rgba(128,128,128,0.05);
+				background: rgba(255,255,255,0.05);
 				border-radius: 4em;
 				display: inline-block;
 				padding: 0.35em 0.75em 0.35em 0.75em;
@@ -1293,8 +1293,8 @@
     }
 
     img.wp-post-image {
-        float: left;
-        margin-right: 2em;
+        float: right;
+        margin-left: 2em;
         margin-bottom: 2em;
         width: 288px;
     }

@@ -23,36 +23,32 @@
             the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         endif;
         ?>
-		<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
-        <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
-        <?php endif; ?>
     </header>
 	<div class="entry-content">
 		<div class="featured-image">
 			<span>
 <?php
-	if ( has_post_thumbnail() ) :
+	if ( !is_home() && has_post_thumbnail() ) :
 		the_post_thumbnail( 'page-banner' );
 	endif;
 ?>
 			</span>
 		</div>  <!-- .featured-image -->
-<?php
-the_content();
+<?php the_content();?>
 
-if ( !is_single() ) : ?>
-<footer><a class="button" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Continue Reading', 'wphelios' ); ?></a></footer>
+<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
+<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
 <?php endif; ?>
 
-<?php
-if( has_tag() ):
-?>
-		<div class="post-meta">
-<?php the_tags( 'Tagged with: ' ); ?>
-		</div>  <!-- .post-meta -->
-<?php
-endif;
+<?php if( has_tag() ): ?>
+	<div class="post-meta">
+		<?php the_tags( 'Tagged with: ' ); ?>
+	</div>  <!-- .post-meta -->
+<?php endif; ?>
 
+<footer><?php if ( !is_single() ) : ?><a class="button" href="<?php echo esc_url( get_permalink() ); ?>"><?php _e( 'Continue Reading', 'wphelios' ); ?></a><?php endif; ?></footer>
+
+<?php
 wp_link_pages( array(
 	'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'wphelios' ) . '</span>',
 	'after'       => '</div>',
