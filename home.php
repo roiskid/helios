@@ -29,7 +29,11 @@ get_header(); ?>
             <section class="carousel">
                 <div class="reel" style="overflow: visible; transform: translate(0px, 0px);">
                     <?php
-                    $cats_selected = implode(',', $wphelios_theme_options['carousel-category']);
+                    if (is_array($wphelios_theme_options['carousel-category'])) {
+	                    $cats_selected = implode(',', $wphelios_theme_options['carousel-category']);
+                    } else {
+	                    $cats_selected = 0;
+                    }
                     $args = array(
                     'cat' => $cats_selected,
                     'post_type' => array( 'page' ));

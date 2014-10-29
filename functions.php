@@ -161,3 +161,31 @@ function wphelios_page_cats_and_tags() {
     register_taxonomy_for_object_type('category', 'page');
 }
 add_action( 'admin_init', 'wphelios_page_cats_and_tags' );
+
+/**
+ * Enqueue scripts and styles for the front end.
+ *
+ * @since WP-Helios 1.0
+ */
+function wphelios_scripts_and_styles() {
+
+	//scripts
+	wp_enqueue_style( 'css-html5shiv', get_template_directory_uri() . '/css/ie/html5shiv.js', array(), '1.0' );
+	wp_style_add_data( 'css-html5shiv', 'conditional', 'lt IE 8' );
+	wp_enqueue_script( 'script-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.0', false );
+	wp_enqueue_script( 'script-dropotron', get_template_directory_uri() . '/js/jquery.dropotron.min.js', array('jquery'), '1.0', false );
+	wp_enqueue_script( 'script-scrolly', get_template_directory_uri() . '/js/jquery.scrolly.min.js', array('jquery'), '1.0', false );
+	wp_enqueue_script( 'script-onvisible', get_template_directory_uri() . '/js/jquery.onvisible.min.js', array('jquery'), '1.0', false );
+	wp_enqueue_script( 'script-skeleton', get_template_directory_uri() . '/js/skel.min.js', array(), '1.0', false );
+	wp_enqueue_script( 'script-layers', get_template_directory_uri() . '/js/skel-layers.min.js', array('skeleton'), '1.0', false );
+	wp_enqueue_script( 'script-init', get_template_directory_uri() . '/js/init.js', array('jquery'), '1.0', false );
+
+	//styles
+	wp_enqueue_style( 'style-skeleton', get_template_directory_uri() . '/css/skel.css', array(), '1.0' );
+	wp_enqueue_style( 'style-style', get_template_directory_uri() . '/css/style.css', array(), '1.0' );
+	wp_enqueue_style( 'style-desktop', get_template_directory_uri() . '/css/style-desktop.css', array(), '1.0' );
+	wp_enqueue_style( 'style-noscript', get_template_directory_uri() . '/css/style-noscript.css', array(), '1.0' );
+	wp_enqueue_style( 'style-ie', get_template_directory_uri() . '/css/ie/v8.css', array(), '1.0' );
+	wp_style_add_data( 'style-ie', 'conditional', 'lt IE 8' );
+}
+add_action( 'wp_enqueue_scripts', 'wphelios_scripts_and_styles' );
