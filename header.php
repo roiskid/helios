@@ -20,13 +20,11 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-		<noscript>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/skel.css" />
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-desktop.css" />
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie/v8.css" /><![endif]-->
+        <!--[if lte IE 8]><script src="<?php echo get_template_directory_uri(); ?>/css/ie/html5shiv.js"></script><![endif]-->
+        <noscript>
+            <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/wp-helios-noscript.min.css" />
+        </noscript>
+        <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie/v8.css" /><![endif]-->
 
 		<?php wp_head(); ?>
 
@@ -35,41 +33,42 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			input[type="submit"],
 			input[type="reset"],
 			.button {
-				background-color: <?php echo $wphelios_theme_options['color']; ?> !important ;
+				background: <?php echo $wphelios_theme_options['color']; ?> !important ;
 			}
 			input[type="button"]:hover,
 			input[type="submit"]:hover,
 			input[type="reset"]:hover,
 			.button:hover
 			{
-				background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
+				background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
+                color: #fff !important;
 			}
 			.dropotron li:hover
 			{
-				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
 			}
 			ul.icons li a:hover
 			{
-				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
 			}
 			a:hover
 			{
-				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
 			}
 			.carousel .forward:hover:before,
 			.carousel .backward:hover:before
 			{
-				background-color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75);
+				background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
 			}
 			form textarea:focus
 			{
-				border-color: <?php echo $wphelios_theme_options['color']; ?>;
+				border-color: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
 			#header .overlay {
-				background-color: <?php echo $wphelios_theme_options['color']; ?> !important;
+				background: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
-			#footer .button.circled {
-				color: <?php echo $wphelios_theme_options['color']; ?>;
+			#footer .icon.circled {
+				background: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
 		</style>
 	</head>

@@ -80,9 +80,16 @@ function wphelios_theme_options_do_page() {
                     <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
                         <td>
-                            <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo esc_url( $options['color'] ); ?>" data-default-color="#00749a" />
+                            <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo $options['color']; ?>" data-default-color="#00749a" />
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[contact-page]"><?php _e( 'Contact page', 'wphelios' ); ?></label></td>
+                        <td>
+                            <?php wp_dropdown_pages( array('selected' => $options['contact-page'], 'name' => 'wphelios_theme_options[contact-page]', 'show_option_none' => ' ', 'option_none_value' => 0 ) ); ?>
+                        </td>
+                    </tr>
+
 				</tbody>
 			</table>
 

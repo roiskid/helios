@@ -29,11 +29,11 @@
 		reset: 'full',
 		breakpoints: {
 			'global':	{ range: '*', href: '/wp-content/themes/wp-helios/css/style.css', containers: 1400, grid: { gutters: 48 } },
-			'wide':		{ range: '-1680', href: '/wp-content/themes/wp-helios/css/style-wide.css', containers: 1200 },
-			'normal':	{ range: '-1280', href: '/wp-content/themes/wp-helios/css/style-normal.css', containers: '100%', grid: { gutters: 36 } },
-			'narrow':	{ range: '-960', href: '/wp-content/themes/wp-helios/css/style-narrow.css', grid: { gutters: 32 } },
-			'narrower': { range: '-840', href: '/wp-content/themes/wp-helios/css/style-narrower.css', grid: { collapse: true } },
-			'mobile':	{ range: '-736', href: '/wp-content/themes/wp-helios/css/style-mobile.css', grid: { gutters: 16 }, viewport: { scalable: false } }
+			'wide':		{ range: '-1680', href: '/wp-content/themes/wp-helios/css/style-wide.min.css', containers: 1200 },
+			'normal':	{ range: '-1280', href: '/wp-content/themes/wp-helios/css/style-normal.min.css', containers: '100%', grid: { gutters: 36 } },
+			'narrow':	{ range: '-960', href: '/wp-content/themes/wp-helios/css/style-narrow.min.css', grid: { gutters: 32 } },
+			'narrower': { range: '-840', href: '/wp-content/themes/wp-helios/css/style-narrower.min.css', grid: { collapse: true } },
+			'mobile':	{ range: '-736', href: '/wp-content/themes/wp-helios/css/style-mobile.min.css', grid: { gutters: 16 }, viewport: { scalable: false } }
 		},
 		plugins: {
 			layers: {
