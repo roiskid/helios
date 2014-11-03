@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying Category pages
+ * The template for displaying Tag pages
+ *
+ * Used to display archive-type pages for posts in a tag.
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,8 +11,6 @@
  * @since WP-Helios 1.0
  */
 
-
-
 get_header(); ?>
 
     <?php if ( have_posts() ) : ?>
@@ -18,7 +18,7 @@ get_header(); ?>
     <!-- Banner -->
         <section id="banner">
             <header>
-                <h2><?php printf( __( 'Category Archives: %s', 'wphelios' ), single_cat_title( '', false ) ); ?></h2>
+                <h2><?php printf( __( 'Tag Archives: %s', 'wphelios' ), single_cat_title( '', false ) ); ?></h2>
             </header>
         </section>
 
@@ -26,7 +26,7 @@ get_header(); ?>
         <div class="wrapper style2">
             <div class="container">
 
-			<?php
+            <?php
                 // Start the Loop.
                 while ( have_posts() ) : the_post();
                     /*
