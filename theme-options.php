@@ -83,15 +83,30 @@ function wphelios_theme_options_do_page() {
                             <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo $options['color']; ?>" data-default-color="#00749a" />
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row"><label class="description" for="wphelios_theme_options[contact-page]"><?php _e( 'Contact page', 'wphelios' ); ?></label></td>
-                        <td>
-                            <?php wp_dropdown_pages( array('selected' => $options['contact-page'], 'name' => 'wphelios_theme_options[contact-page]', 'show_option_none' => ' ', 'option_none_value' => 0 ) ); ?>
-                        </td>
-                    </tr>
-
 				</tbody>
 			</table>
+
+            <h3 class="title"><?php _e( 'Footer', 'wphelios' ); ?></h3>
+
+            <table class="form-table">
+                <tbody>
+                <tr>
+                    <th scope="row"><label class="description" for="wphelios_theme_options[footer-img]"><?php _e( 'Footer Background Image', 'wphelios' ); ?></label></td>
+                    <td>
+                        <input id="wphelios_theme_options[footer-img]" class="regular-text" type="text" name="wphelios_theme_options[footer-img]" value="<?php echo esc_url( $options['footer-img'] ); ?>" />
+                        <input id="upload_footer_img_button" type="button" class="button" value="<?php _e( 'Upload Image', 'wphelios' ); ?>" />
+                        <span class="description"><?php _e('Ideal size is 1920x150', 'wphelios' ); ?></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label class="description" for="wphelios_theme_options[footer-link]"><?php _e( 'Footer Image Links To', 'wphelios' ); ?></label></td>
+                    <td>
+                        <!-- http://staticmapmaker.com/ -->
+                        <?php wp_dropdown_pages( array('selected' => $options['footer-link'], 'name' => 'wphelios_theme_options[footer-link]', 'show_option_none' => ' ', 'option_none_value' => 0 ) ); ?>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
 			<h3 class="title"><?php _e( 'Analytics and Tracking', 'wphelios' ); ?></h3>
 
@@ -135,6 +150,17 @@ function wphelios_theme_options_do_page() {
 
 					return false;
 				});
+                $('#upload_footer_img_button').click(function() {
+                    tb_show('Upload a footer image', 'media-upload.php?TB_iframe=true', false);
+
+                    window.send_to_editor = function(html) {
+                        var image_url = $('img',html).attr('src');
+                        $('#upload_footer_img_button').prev('input').val(image_url);
+                        tb_remove();
+                    }
+
+                    return false;
+                });
 				$('#upload_home_logo').click(function() {
 					tb_show('Upload a homepage logo', 'media-upload.php?TB_iframe=true', false);
 

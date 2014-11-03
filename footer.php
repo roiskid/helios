@@ -79,11 +79,13 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			</div>
 
             <!-- Contactmap -->
+            <?php if (!empty($wphelios_theme_options['footer-img'])) : ?>
             <section id="contactmap">
-                <a href="<?php echo get_page_link($wphelios_theme_options['contact-page']); ?>"></a>
+                <a href="<?php echo get_page_link($wphelios_theme_options['footer-link']); ?>"></a>
                 <div id="mapoverlay"></div>
-                    <div id="map" style="background-image: url(http://4eae35f1b359.netural.nl:8080/wp-content/uploads/4eae35f1b359/staticmap-tel-aviv.png);"></div>
+                <div id="map" style="background-image: url(<?php echo $wphelios_theme_options['footer-img']; ?>);"></div>
             </section>
+            <?php endif; ?>
 
             <!-- Copyright -->
             <div class="copyright">
