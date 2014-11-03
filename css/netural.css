@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*
+	Helios by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	WP-Helios by Netural
+*/
+
+body {
+    background: #454342 !important;
+}
+
+#logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    /* -webkit-filter: drop-shadow(0 5px 5px #000); */
+    /* filter: drop-shadow(0 5px 5px #000); */
+}
+
+/*
+#header header p {
+    -webkit-filter: drop-shadow(0 2px 2px #000);
+    filter: drop-shadow(0 2px 2px #000);
+    font-weight: bold;
+}
+*/
+
+#banner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.wrapper {
+    padding: 1em;
+}
+
+h2.widget-title {
+    font-size: 1.25em;
+    margin-bottom: .75em;
+}
+
+footer {
+    text-align: center !important;
+}
+
+section, article {
+    margin-bottom: 0;
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(128,128,128,0.75);
+    font-size: .8em;
+    cursor: default;
+    background-color: #fff;
+    height: 150px;
+    padding-top: 5em;
+}
+
+.home .container {
+    padding-top: 3em;
+}
+
+#comments {
+    margin-top: 3em;
+}
+
+div.container hr:first-child {
+    display: none;
+}
+
+.carousel article {
+    display: inline-table !important;
+}
+
+.carousel article p {
+    min-height: 5em;
+}
+
+.widget ul li {
+    margin-bottom: 1em;
+}
+
+img.wp-post-image {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    width: 288px;
+}
+
+#footer .icon.circled {
+    color: #fff !important;
+}
+
+ul.icons {
+    background: rgba(255,255,255,0.15) !important;
+}
+
+.carousel .forward:before, .carousel .backward:before {
+    background-color: rgba(70,67,66,0.5) !important;
+}
+
+#nav>ul>li>a:hover {
+    color: #fff !important;
+}

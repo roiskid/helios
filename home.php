@@ -40,7 +40,6 @@ get_header(); ?>
                     'posts_per_page' => -1);
                     query_posts( $args );
 
-
                     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <?php
                         $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );

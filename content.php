@@ -28,7 +28,7 @@
 		<div class="featured-image">
 			<span>
 <?php
-	if ( !is_home() && has_post_thumbnail() ) :
+	if ( !is_home() && !is_archive() && has_post_thumbnail() ) :
 		the_post_thumbnail( 'page-banner' );
 	endif;
 ?>

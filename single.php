@@ -10,8 +10,8 @@
 get_header(); ?>
 
     <!-- Main -->
-<div class="wrapper style1">
-    <div class="container">
+        <div class="wrapper style1">
+            <div class="container">
 
 <?php
 // Start the Loop.
@@ -27,5 +27,17 @@ if( have_posts() ) :
     endwhile;
 endif;
 ?>
+
+    <!-- Navigation -->
+        <div class="navigation">
+            <div class="alignleft">
+                <?php previous_post('&laquo; %',
+                    translate('Previous', 'wphelios').': ', 'yes'); ?>
+            </div>
+            <div class="alignright">
+                <?php next_post('% &raquo;',
+                    translate('Next', 'wphelios').': ', 'yes'); ?>
+            </div>
+        </div> <!-- .navigation -->
 
 <?php get_footer(); ?>
