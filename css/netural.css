@@ -9,6 +9,7 @@
 
 body {
     background: #454342 !important;
+    overflow-x: hidden;
 }
 
 #logo img {
@@ -105,4 +106,73 @@ ul.icons {
 
 #nav>ul>li>a:hover {
     color: #fff !important;
+}
+
+hr {
+    clear: both;
+}
+
+/*********************************************************************************/
+/* breadcrumbs                                                                   */
+/*********************************************************************************/
+
+#breadcrumbs {
+    margin-top: -5em;
+    margin-bottom: 3em;
+}
+
+/*********************************************************************************/
+/* posts_nav_link                                                                */
+/*********************************************************************************/
+
+.navigation {
+    clear: both;
+}
+
+.navigation p {
+    text-align: center;
+}
+
+.navigation .alignleft {
+    float: left;
+}
+
+.navigation .alignright {
+    float: right;
+}
+/*********************************************************************************/
+/* Contactmap                                                                    */
+/*********************************************************************************/
+
+#contactmap {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #E9E5DC;
+}
+
+#contactmap a {
+    width: 100%;
+    height: 150px;
+    display: block;
+    position: absolute;
+    z-index: 102;
+}
+
+#mapoverlay {
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    z-index: 101;
+    -webkit-box-shadow: 0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
+    -moz-box-shadow:    0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
+    box-shadow:         0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
+}
+
+#map {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
 }

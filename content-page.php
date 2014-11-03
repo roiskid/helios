@@ -8,6 +8,11 @@
  */
 ?>
 
+<!-- Breadcrumbs -->
+<div id="breadcrumbs">
+    <?php if(function_exists('the_breadcrumbs')) the_breadcrumbs(); ?>
+</div>
+
 <article id="main" <?php if ( strpos(get_page_template(), 'sidebar') === false ) : ?>class="special"<?php endif; ?>>
 	<header>
 		<h2><?php the_title(); ?></h2>

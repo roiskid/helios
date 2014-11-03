@@ -1,6 +1,6 @@
 @charset 'UTF-8';
-@import url('font-google.css');
 @import url('font-awesome.min.css');
+@import url('font-google.css');
 
 /*
 	Helios by HTML5 UP
@@ -16,7 +16,6 @@
 	{
 		background: #f0f4f4;
 		color: #5b5b5b;
-        overflow-x: hidden;
 	}
 
 		body.is-loading *
@@ -148,7 +147,7 @@
 		border: 0;
 		top: 4.5em;
 		margin-bottom: 9em;
-        clear: both;
+
 		height: 6px;
 		border-top: solid 1px rgba(128,128,128,0.2);
 		border-bottom: solid 1px rgba(128,128,128,0.2);
@@ -1218,62 +1217,7 @@
 				margin-bottom: 3em;
 			}
 		
-			.carousel article p {
-                text-align: center;
-            }
-
-/*********************************************************************************/
-/* posts_nav_link                                                                */
-/*********************************************************************************/
-
-    .navigation {
-        clear: both;
-    }
-
-    .navigation p {
-        text-align: center;
-    }
-
-    .navigation .alignleft {
-        float: left;
-    }
-
-    .navigation .alignright {
-        float: right;
-    }
-/*********************************************************************************/
-/* Contactmap                                                                    */
-/*********************************************************************************/
-
-    #contactmap {
-        margin-top: 0;
-        margin-bottom: 0;
-        background-color: #E9E5DC;
-    }
-
-    #contactmap a {
-        width: 100%;
-        height: 150px;
-        display: block;
-        position: absolute;
-        z-index: 102;
-    }
-
-    #mapoverlay {
-        height: 150px;
-        width: 100%;
-        position: absolute;
-        z-index: 101;
-        -webkit-box-shadow: 0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
-        -moz-box-shadow:    0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
-        box-shadow:         0px 20px 20px 0px rgba(50, 50, 50, 0.75) inset;
-    }
-
-    #map {
-        height: 150px;
-        width: 100%;
-        position: relative;
-        z-index: 100;
-        background-repeat: no-repeat;
-        background-position-x: 50%;
-    }
+			.carousel article p
+			{
+				text-align: center;
+			}
