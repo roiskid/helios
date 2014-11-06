@@ -94,6 +94,7 @@ img.wp-post-image {
 
 #footer .icon.circled {
     color: #fff !important;
+    background: #000;
 }
 
 ul.icons {
@@ -110,6 +111,11 @@ ul.icons {
 
 hr {
     clear: both;
+}
+
+.container iframe {
+    width: 100%;
+    min-height: 640px;
 }
 
 /*********************************************************************************/
