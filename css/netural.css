@@ -92,9 +92,12 @@ img.wp-post-image {
     width: 288px;
 }
 
+#footer {
+    background: #000;
+}
+
 #footer .icon.circled {
     color: #fff !important;
-    background: #000;
 }
 
 ul.icons {
