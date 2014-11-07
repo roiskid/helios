@@ -36,7 +36,6 @@ get_header(); ?>
                     }
                     $args = array(
                     'cat' => $cats_selected,
-                    'post_type' => array( 'page' ),
                     'posts_per_page' => -1);
                     query_posts( $args );
 
