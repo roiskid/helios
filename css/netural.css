@@ -93,7 +93,7 @@ img.wp-post-image {
 }
 
 #footer {
-    background: #000;
+    background: #000 !important;
 }
 
 #footer .icon.circled {
