@@ -90,6 +90,7 @@ img.wp-post-image {
     margin-left: 2em;
     margin-bottom: 2em;
     width: 288px;
+    height: auto;
 }
 
 #footer {
