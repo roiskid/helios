@@ -81,7 +81,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
             <!-- Contactmap -->
             <?php if (!empty($wphelios_theme_options['footer-img'])) : ?>
             <section id="contactmap">
-                <a href="<?php echo get_page_link($wphelios_theme_options['footer-link']); ?>"></a>
+                <?php if(!empty($wphelios_theme_options['footer-link'])) : ?><a href="<?php echo get_page_link($wphelios_theme_options['footer-link']); ?>"></a><?php endif; ?>
                 <div id="mapoverlay"></div>
                 <div id="map" style="background-image: url(<?php echo $wphelios_theme_options['footer-img']; ?>);"></div>
             </section>
