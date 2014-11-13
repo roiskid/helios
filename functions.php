@@ -237,3 +237,11 @@ function the_breadcrumbs() {
     elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Blogarchive: "; echo'';}
     elseif (is_search()) {echo"Search results: "; }
 }
+
+/*
+ * https://wordpress.org/support/topic/plugin-polylang-how-to-internationalize-a-theme
+ */
+add_action( 'after_setup_theme', 'wphelios_setup_theme' );
+function wphelios_setup_theme() {
+    load_theme_textdomain('wphelios', get_template_directory());
+}
