@@ -118,7 +118,7 @@ function wphelios_theme_options_do_page() {
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[tracking]"><?php _e( 'Other Tracking Code', 'wphelios' ); ?></label></th>
-						<td><textarea id="wphelios_theme_options[tracking]" class="large-text" cols="30" rows="8" name="wphelios_theme_options[tracking]"><?php echo esc_textarea( $options['tracking'] ); ?></textarea></td>
+						<td><textarea id="wphelios_theme_options[tracking]" class="large-text" cols="25" rows="8" name="wphelios_theme_options[tracking]"><?php echo esc_textarea( $options['tracking'] ); ?></textarea></td>
 					</tr>
 				</tbody>
 			</table>
@@ -219,7 +219,7 @@ function wphelios_theme_options_do_page() {
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[social-subheading]"><?php _e( 'Social Subheading', 'wphelios' ); ?></label></td>
-						<td><textarea id="wphelios_theme_options[social-subheading]" class="large-text" cols="30" rows="8" name="wphelios_theme_options[social-subheading]"><?php esc_attr_e( $options['social-subheading'] ); ?></textarea></td>
+						<td><textarea id="wphelios_theme_options[social-subheading]" class="large-text" cols="25" rows="8" name="wphelios_theme_options[social-subheading]"><?php esc_attr_e( $options['social-subheading'] ); ?></textarea></td>
 					</tr>
 					<tr>
 						<th scope="row"><label class="description" for="wphelios_theme_options[social-link-1-url]"><?php _e( 'Social Link 1', 'wphelios' ); ?></label></td>

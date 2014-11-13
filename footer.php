@@ -90,7 +90,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
             <!-- Copyright -->
             <div class="copyright">
                 <ul class="menu">
-                    <li>&copy; Copyright <?php echo date('Y'); ?>, by <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>. All rights reserved.</li>
+                    <li>&copy; Copyright <?php echo date('Y'); ?>, by <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>. <?php _e('All rights reserved.', 'wphelios'); ?></li>
                     <li>Design: <a href="//html5up.net" target="_blank" title="Design">HTML5 UP</a></li>
                     <li>Theme: <a href="//www.netural.nl" target="_blank" title="Theme">Netural</a></li>
                 </ul>

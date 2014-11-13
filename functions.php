@@ -195,7 +195,7 @@ function the_breadcrumbs() {
         echo "<a href='/";
         //echo get_option('home');
         echo "'>";
-        echo "Home";
+        echo _e('Home', 'wphelios');
         echo "</a>";
 
         if (is_category() || is_single()) {
@@ -229,13 +229,13 @@ function the_breadcrumbs() {
             }
         }
     }
-    elseif (is_tag()) {single_tag_title();}
-    elseif (is_day()) {echo"Archive: "; the_time('F jS, Y'); echo'</li>';}
-    elseif (is_month()) {echo"Archive: "; the_time('F, Y'); echo'</li>';}
-    elseif (is_year()) {echo"Archive: "; the_time('Y'); echo'</li>';}
-    elseif (is_author()) {echo"Author's archive: "; echo'</li>';}
-    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Blogarchive: "; echo'';}
-    elseif (is_search()) {echo"Search results: "; }
+    elseif (is_tag()) { single_tag_title();}
+    elseif (is_day()) { echo _e("Archive: "); the_time('F jS, Y'); echo '</li>';}
+    elseif (is_month()) { echo _e("Archive: "); the_time('F, Y'); echo '</li>';}
+    elseif (is_year()) { echo _e("Archive: "); the_time('Y'); echo '</li>';}
+    elseif (is_author()) { echo _e("Author's Archive: "); echo '</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { echo _e("Blog Archive: "); echo '';}
+    elseif (is_search()) { echo _e("Search results: "); }
 }
 
 /*

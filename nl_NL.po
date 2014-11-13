@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Helios\n"
-"POT-Creation-Date: 2014-11-13 12:09+0100\n"
-"PO-Revision-Date: 2014-11-13 13:27+0100\n"
+"POT-Creation-Date: 2014-11-13 13:48+0100\n"
+"PO-Revision-Date: 2014-11-13 13:58+0100\n"
 "Last-Translator: Onno Bos <bosonno@gmail.com>\n"
 "Language-Team: Netural <info@netural.nl>\n"
 "Language: nl\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/404.php:18
 msgid "Not Found"
-msgstr "Niets gevonden"
+msgstr "Niet gevonden"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/404.php:19
 msgid "It looks like nothing was found at this location. Maybe try a search?"
@@ -85,61 +85,87 @@ msgstr "Wijzig"
 msgid "Continue Reading"
 msgstr "Lees verder"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:38
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/footer.php:93
+msgid "All rights reserved."
+msgstr "Alle rechten voorbehouden."
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:35
 msgid "Sidebar"
 msgstr "Zijbalk"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:40
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:37
 msgid "Appears in the left or right sidebar section of the site."
 msgstr "Verschijnt in de linker of rechter zijbalk van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:47
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:44
 msgid "Footer 1"
-msgstr ""
+msgstr "Voettekst 1"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:49
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:46
 msgid "Appears in the left upper footer section of the site."
 msgstr "Verschijnt in de linker boven footer sectie van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:56
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:53
 msgid "Footer 2"
-msgstr ""
+msgstr "Voettekst 2"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:58
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:55
 msgid "Appears in the middle upper footer section of the site."
 msgstr "Verschijnt in de middelste boven footer sectie van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:65
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:62
 msgid "Footer 3"
-msgstr ""
+msgstr "Voettekst 3"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:67
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:64
 msgid "Appears in the right upper footer section of the site."
 msgstr "Verschijnt in de rechter boven footer van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:74
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:71
 msgid "Footer 4"
-msgstr ""
+msgstr "Voettekst 4"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:76
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:73
 msgid "Appears in the left bottom footer section of the site."
 msgstr "Verschijnt in de linker onder footer sectie van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:83
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:80
 msgid "Footer 5"
-msgstr ""
+msgstr "Voettekst 5"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:85
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:82
 msgid "Appears in the middle bottom footer section of the site."
 msgstr "Verschijnt in de middelste onder footer sectie van de site."
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:92
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:89
 msgid "Footer 6"
-msgstr ""
+msgstr "Voettekst 6"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:94
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:91
 msgid "Appears in the right bottom footer section of the site."
 msgstr "Verschijnt in de middelste onder footer sectie van de site."
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:198
+msgid "Home"
+msgstr ""
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:233
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:234
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:235
+msgid "Archive: "
+msgstr "Archief:"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:236
+msgid "Author's Archive: "
+msgstr "Auteurs Archief:"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:237
+msgid "Blog Archive: "
+msgstr "Blog Archief:"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/functions.php:238
+msgid "Search results: "
+msgstr "Zoek resultaten:"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/loop-featured-pages.php:27
 msgid "Learn More"
@@ -181,7 +207,7 @@ msgstr "Weergave Opties"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:59
 msgid "Header Background Logo"
-msgstr "Header Achtergrond Logo"
+msgstr "Hoofdtekst Achtergrond Logo"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:62
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:77
@@ -190,7 +216,7 @@ msgstr ""
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:66
 msgid "Header Background Image"
-msgstr "Header Achtergrond Afbeelding"
+msgstr "Hoofdtekst Achtergrond Afbeelding"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:69
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:97
@@ -211,11 +237,11 @@ msgstr "Kleur"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:89
 msgid "Footer"
-msgstr ""
+msgstr "Voettekst"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:94
 msgid "Footer Background Image"
-msgstr "Footer Achtergrond Afbeelding"
+msgstr "Voettekst Achtergrond Afbeelding"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:98
 msgid "Ideal size is 1920x150"
@@ -223,7 +249,7 @@ msgstr "Ideale afmeting is 1920x150"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:102
 msgid "Footer Image Links To"
-msgstr "Footer Afbeeldint Linkt Naar"
+msgstr "Voettekst Afbeelding Linkt Naar"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:111
 msgid "Analytics and Tracking"
@@ -251,7 +277,7 @@ msgstr "Hoofdtitel"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:187
 msgid "Subheading"
-msgstr "Subtitel"
+msgstr "Ondertitel"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:191
 msgid "Button Label"
@@ -259,36 +285,36 @@ msgstr "Knop Label"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:197
 msgid "Carousel Categories"
-msgstr "Carousel Categorieën"
+msgstr "Carrousel Categorieën"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:217
 msgid "Social Heading"
-msgstr "Social Titel"
+msgstr "Sociale Titel"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:221
 msgid "Social Subheading"
-msgstr "Social Ondertitel"
+msgstr "Sociale Ondertitel"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:225
 msgid "Social Link 1"
-msgstr ""
+msgstr "Sociale Link 1"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:231
 msgid "Social Link 2"
-msgstr ""
+msgstr "Sociale Link 2"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:237
 msgid "Social Link 3"
-msgstr ""
+msgstr "Sociale Link 3"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:243
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:255
 msgid "Social Link 4"
-msgstr ""
+msgstr "Sociale Link 4"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:249
 msgid "Social Link 5"
-msgstr ""
+msgstr "Sociale Link 5"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:264
 msgid "Save Options"
