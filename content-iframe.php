@@ -22,7 +22,13 @@
         <?php endif; ?>
 	</header>
 
-    <iframe id="iframe"><?php the_content(); ?></iframe>
+    <?php the_content(); ?>
+
+    <?php $url = get_post_meta( get_the_ID(), 'url', true ); ?>
+
+    <?php if( !empty( $url ) ) : ?>
+        <iframe src="<?=$url;?>"></iframe>
+    <?php endif; ?>
 
 	<footer></footer>
 
