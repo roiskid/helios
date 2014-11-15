@@ -179,7 +179,7 @@ add_action( 'wp_enqueue_scripts', 'wphelios_enqueue_scripts' );
  * @since WP-Helios 1.0
  */
 function wphelios_enqueue_styles() {
-	wp_enqueue_style( 'netural', get_template_directory_uri() . '/css/netural.css', array(), '' );
+	wp_enqueue_style( 'netural', get_template_directory_uri() . '/css/netural.css', array(), null, false );
 }
 add_action( 'wp_enqueue_scripts', 'wphelios_enqueue_styles' );
 
