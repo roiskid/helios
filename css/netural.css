@@ -32,6 +32,9 @@ body {
     margin: 0;
 }
 
+.carousel .image img {
+    height: 288px;
+}
 
 header>p {
     font-size: 1em !important;

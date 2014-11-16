@@ -70,14 +70,14 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			#footer .icon.circled {
 				background: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
+
+            <?php if( is_home() && !empty($wphelios_theme_options['header-vid'])) : ?>
             .homepage #header.ready .overlay {
                 opacity: 100;
             }
             #header {
                 background-image: none !important;
             }
-
-            <?php if( !empty($wphelios_theme_options['header-vid'])) : ?>
             .video-container {
                 position: relative;
                 height: 100%;
