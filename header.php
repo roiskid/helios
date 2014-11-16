@@ -70,6 +70,31 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 			#footer .icon.circled {
 				background: <?php echo $wphelios_theme_options['color']; ?> !important;
 			}
+            .homepage #header.ready .overlay {
+                opacity: 100;
+            }
+            #header {
+                background-image: none !important;
+            }
+
+            <?php if( !empty($wphelios_theme_options['header-vid'])) : ?>
+            .video-container {
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+            }
+            .video-container iframe,
+            .video-container object,
+            .video-container embed {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                transform: translate(-50%, -50%);
+            }
+            <?php endif; ?>
 		</style>
 	</head>
 
@@ -85,7 +110,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
                                 <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><a href="/"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></a></div><?php endif; ?>
                             <?php endif; ?>
                             <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><?php if (is_home()) : ?><hr /><?php endif; ?><?php endif; ?>
-							<?php if (is_home() && !empty($wphelios_theme_options['home-subheading'])) : ?><p><?php echo $wphelios_theme_options['home-subheading']; ?></p><?php endif; ?>
+							<?php if (is_home() && !empty(bloginfo( 'description' ))) : ?><p><?php bloginfo( 'description' ); ?></p><?php endif; ?>
 						</header>
 						<?php if( is_home() ) { ?>
 						<footer>

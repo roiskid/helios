@@ -32,13 +32,13 @@ body {
     margin: 0;
 }
 
-/*
-#header header p {
-    -webkit-filter: drop-shadow(0 2px 2px #000);
-    filter: drop-shadow(0 2px 2px #000);
-    font-weight: bold;
+
+header>p {
+    font-size: 1em !important;
+    /*-webkit-filter: drop-shadow(0 2px 2px #000); */
+    /*filter: drop-shadow(0 2px 2px #000); */
+    /*font-weight: bold; */
 }
-*/
 
 #banner {
     padding-left: 0 !important;

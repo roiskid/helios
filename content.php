@@ -27,17 +27,26 @@
 	<div class="entry-content">
 		<div class="featured-image">
 			<span>
-<?php
-	if ( !is_home() && !is_archive() && has_post_thumbnail() ) :
-		the_post_thumbnail( 'page-banner' );
-	endif;
-?>
+            <?php
+                if ( !is_home() && !is_archive() && has_post_thumbnail() ) :
+                    the_post_thumbnail( 'page-banner' );
+                endif;
+            ?>
 			</span>
 		</div>  <!-- .featured-image -->
-<?php the_content();?>
 
-<span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
-<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
+<?php
+if ( is_home() ) :
+    the_excerpt();
+else :
+    the_content();
+endif;
+?>
+
+<?php if (!is_home()) : ?>
+        <span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>
+        <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?> in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'wphelios' ) ); ?></span>
+        <?php endif; ?>
 <?php endif; ?>
 
 <?php if( has_tag() ): ?>

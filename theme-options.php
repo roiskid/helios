@@ -71,6 +71,15 @@ function wphelios_theme_options_do_page() {
 						</td>
 					</tr>
                     <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[header-img]"><?php _e( 'Header Background Video', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[header-vid]" class="regular-text" type="text" name="wphelios_theme_options[header-vid]" value="<?php echo $options['header-vid']; ?>" placeholder="e.g. Vz8cRz0bjzQ" />
+                            <span class="description"><?php _e('YouTube ID' ); ?></span>
+                            <a href="https://support.google.com/youtube/answer/171780?hl=<?php bloginfo('language'); ?>" target="_blank"><?php _e( 'Help', 'wphelios' ); ?></a>
+
+                        </td>
+                    </tr>
+                    <tr>
 	                    <th scope="row"><label class="description" for="wphelios_theme_options[home-logo]"><?php _e( 'Homepage Logo', 'wphelios' ); ?></label></td>
 	                    <td>
 		                    <input id="wphelios_theme_options[home-logo]" class="regular-text" type="text" name="wphelios_theme_options[home-logo]" value="<?php echo esc_url( $options['home-logo'] ); ?>" />
