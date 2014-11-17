@@ -22,7 +22,11 @@ body {
     /* filter: drop-shadow(0 5px 5px #000); */
 }
 
-#post_thumbnail, .carousel .post_thumbnail {
+.carousel article {
+    width: 14em !important;
+}
+
+.post_thumbnail, .carousel .post_thumbnail {
     width: 288px;
     height: 288px;
     overflow: hidden;

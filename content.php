@@ -25,10 +25,11 @@
         ?>
     </header>
 	<div class="entry-content">
-        <?php if (has_post_thumbnail()) : ?>
-            <div id="post_thumbnail">
-                <?php the_post_thumbnail(); ?>
-            </div>
+        <?php if (has_post_thumbnail()) :
+            $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+            $feat_image_title = get_post(get_post_thumbnail_id($post->ID))->post_title;
+        ?>
+            <div class="post_thumbnail"><img src="<?=$feat_image?>" alt="<?=$feat_image_title?>"></div>
         <?php endif; ?>
 
         <?php
