@@ -25,23 +25,19 @@
         ?>
     </header>
 	<div class="entry-content">
-		<div class="featured-image">
-			<span>
-            <?php
-                if ( !is_home() && !is_archive() && has_post_thumbnail() ) :
-                    the_post_thumbnail( 'page-banner' );
-                endif;
-            ?>
-			</span>
-		</div>  <!-- .featured-image -->
+        <?php if (has_post_thumbnail()) : ?>
+            <div id="post_thumbnail">
+                <?php the_post_thumbnail(); ?>
+            </div>
+        <?php endif; ?>
 
-<?php
-if ( is_home() ) :
-    the_excerpt();
-else :
-    the_content();
-endif;
-?>
+        <?php
+        if ( is_home() ) :
+            the_excerpt();
+        else :
+            the_content();
+        endif;
+        ?>
 
 <?php if (!is_home()) : ?>
         <span class="byline"><?php _e( 'Posted by', 'wphelios' ); ?> <?php echo get_the_author_link(); ?> on <?php the_date(); ?>

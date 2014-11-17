@@ -22,10 +22,9 @@
         <?php endif; ?>
 	</header>
     <?php if (has_post_thumbnail()) : ?>
-    <a href="#" class="image featured">
-        <?php if ( strpos(get_page_template(), 'sidebar') === false ) : the_post_thumbnail( 'page-banner' ); endif; ?>
-        <?php if ( strpos(get_page_template(), 'sidebar') !== false ) : the_post_thumbnail( 'sidebar-page-banner' ); endif; ?>
-    </a>
+    <div id="post_thumbnail">
+        <?php the_post_thumbnail(); ?>
+    </div>
     <?php endif; ?>
 <?php the_content(); ?>
 

@@ -44,10 +44,10 @@ get_header(); ?>
                         <?php
                         $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                         $feat_image_title = get_post(get_post_thumbnail_id($post->ID))->post_title;
-                        $subheading = get_post_meta( get_the_ID(), '_subheading', true );
+                        $subheading = get_post_meta( get_the_ID(), 'subheading', true );
                         ?>
                         <article class="">
-                            <a href="<?php the_permalink() ?>" class="image featured"><img src="<?=$feat_image?>" alt="<?=$feat_image_title?>"></a>
+                            <a href="<?php the_permalink() ?>"><div class="post_thumbnail"><img src="<?=$feat_image?>" alt="<?=$feat_image_title?>"></div></a>
                             <header>
                                 <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
                             </header>
