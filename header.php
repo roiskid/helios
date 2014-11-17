@@ -105,9 +105,9 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 					<div class="inner">
 						<header>
                             <?php if (is_home()) : ?>
-                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></div><?php endif; ?>
+                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" <?php if (!empty($wphelios_theme_options['logo-width'])) : ?> style="width:<?php echo $wphelios_theme_options['logo-width']; ?>px;"<?php endif; ?>/></div><?php endif; ?>
                             <?php else: ?>
-                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><a href="/"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></a></div><?php endif; ?>
+                                <?php if (!empty($wphelios_theme_options['header-logo'])) : ?><div id="logo"><a href="/"><img src="<?php echo $wphelios_theme_options['header-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" <?php if (!empty($wphelios_theme_options['logo-width'])) : ?> style="width:<?php echo $wphelios_theme_options['logo-width']; ?>px;"<?php endif; ?>/></a></div><?php endif; ?>
                             <?php endif; ?>
                             <?php if (!empty($wphelios_theme_options['home-heading'])) : ?><h1><a href="/"><?php echo $wphelios_theme_options['home-heading']; ?></a></h1><?php if (is_home()) : ?><hr /><?php endif; ?><?php endif; ?>
 							<?php if (is_home() && !empty(bloginfo( 'description' ))) : ?><p><?php bloginfo( 'description' ); ?></p><?php endif; ?>

@@ -25,7 +25,7 @@
         ?>
     </header>
 	<div class="entry-content">
-        <?php if (has_post_thumbnail()) :
+        <?php if (!is_home() && has_post_thumbnail()) :
             $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
             $feat_image_title = get_post(get_post_thumbnail_id($post->ID))->post_title;
         ?>

@@ -17,7 +17,7 @@ get_header(); ?>
             <section id="banner">
                 <header>
 	                <?php if (!empty($wphelios_theme_options['home-logo'])) : ?>
-		                <div id="home_logo"><img src="<?php echo $wphelios_theme_options['home-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" /></div>
+		                <div id="home_logo"><img src="<?php echo $wphelios_theme_options['home-logo']; ?>" alt="<?php bloginfo( 'name' ); ?> logo" <?php if (!empty($wphelios_theme_options['logo-width'])) : ?> style="width:<?php echo $wphelios_theme_options['logo-width']; ?>px;"<?php endif; ?>/></div>
 	                <?php else: ?>
 		                <h2><?php bloginfo( 'name' ); ?></h2>
                     <?php endif; ?>

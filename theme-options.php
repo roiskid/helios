@@ -87,6 +87,12 @@ function wphelios_theme_options_do_page() {
 	                    </td>
                     </tr>
                     <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[logo-width]"><?php _e( 'Logo Width', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[logo-width]" class="regular-text" type="text" name="wphelios_theme_options[logo-width]" value="<?php echo ( $options['logo-width'] ); ?>" /> px
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
                         <td>
                             <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo $options['color']; ?>" data-default-color="#00749a" />
