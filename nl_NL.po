@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP-Helios\n"
-"POT-Creation-Date: 2014-11-13 13:48+0100\n"
-"PO-Revision-Date: 2014-11-16 11:47+0100\n"
+"POT-Creation-Date: 2014-11-18 13:47+0100\n"
+"PO-Revision-Date: 2014-11-18 13:49+0100\n"
 "Last-Translator: Onno Bos <bosonno@gmail.com>\n"
 "Language-Team: Netural <info@netural.nl>\n"
 "Language: nl\n"
@@ -32,6 +32,12 @@ msgstr ""
 msgid "Category Archives: %s"
 msgstr "Categorie Archieven: %s"
 
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-iframe.php:35
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-page.php:52
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:65
+msgid "Edit"
+msgstr "Bewerk"
+
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-none.php:13
 msgid "Nothing Found"
 msgstr "Niets gevonden"
@@ -60,27 +66,22 @@ msgstr ""
 "zoekopdracht."
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-page.php:32
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:39
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:44
 msgid "Posted by"
 msgstr "Geschreven door"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-page.php:33
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:40
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:45
 msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ""
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-page.php:46
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:53
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:59
 msgid "Pages:"
 msgstr "Pagina's:"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content-page.php:52
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:59
-msgid "Edit"
-msgstr "Bewerk"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:49
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/content.php:55
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/loop-recent-posts.php:96
 msgid "Continue Reading"
 msgstr "Lees verder"
@@ -207,19 +208,19 @@ msgstr "Weergave Opties"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:59
 msgid "Header Background Logo"
-msgstr "Hoofdtekst Achtergrond Logo"
+msgstr "Hoofd Achtergrond Logo"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:62
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:77
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:86
 msgid "Upload Logo"
 msgstr ""
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:66
 msgid "Header Background Image"
-msgstr "Hoofdtekst Achtergrond Afbeelding"
+msgstr "Hoofd Achtergrond Afbeelding"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:69
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:97
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:124
 msgid "Upload Image"
 msgstr "Upload Afbeelding"
 
@@ -228,94 +229,115 @@ msgid "Ideal size is 1920x1080"
 msgstr "Ideale afmeting is 1920x1080"
 
 #: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:74
-msgid "Homepage Logo"
+msgid "Header Background Video"
+msgstr "Hoofd Achtergrond Logo"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:77
+msgid "YouTube ID"
 msgstr ""
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:81
-msgid "Color"
-msgstr "Kleur"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:89
-msgid "Footer"
-msgstr "Voettekst"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:94
-msgid "Footer Background Image"
-msgstr "Voettekst Achtergrond Afbeelding"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:98
-msgid "Ideal size is 1920x150"
-msgstr "Ideale afmeting is 1920x150"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:102
-msgid "Footer Image Links To"
-msgstr "Voettekst Afbeelding Linkt Naar"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:111
-msgid "Analytics and Tracking"
-msgstr ""
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:116
-msgid "Google Analytics Profile ID"
-msgstr "Google Analytics Profiel ID"
-
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:117
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:78
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:144
 msgid "Help"
 msgstr "Hulp"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:120
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:83
+msgid "Homepage Logo"
+msgstr ""
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:90
+msgid "Logo Width"
+msgstr "Logo Breedte"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:96
+msgid "Menu Color"
+msgstr "Menu Kleur"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:102
+msgid "Text Color"
+msgstr "Tekst Kleur"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:108
+msgid "Button Color"
+msgstr "Knop Kleur"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:116
+msgid "Footer"
+msgstr "Voettekst"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:121
+msgid "Footer Background Image"
+msgstr "Voettekst Achtergrond Afbeelding"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:125
+msgid "Ideal size is 1920x150"
+msgstr "Ideale afmeting is 1920x150"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:129
+msgid "Footer Image Links To"
+msgstr "Voettekst Afbeelding Linkt Naar"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:138
+msgid "Analytics and Tracking"
+msgstr ""
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:143
+msgid "Google Analytics Profile ID"
+msgstr "Google Analytics Profiel ID"
+
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:147
 msgid "Other Tracking Code"
 msgstr "Andere Tracking Code"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:178
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:205
 msgid "Homepage Settings"
 msgstr "Homepage Instellingen"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:183
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:210
 msgid "Main Headline"
 msgstr "Hoofdtitel"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:187
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:214
 msgid "Subheading"
 msgstr "Ondertitel"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:191
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:218
 msgid "Button Label"
 msgstr "Knop Label"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:197
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:224
 msgid "Carousel Categories"
 msgstr "Carrousel Categorieën"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:217
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:244
 msgid "Social Heading"
 msgstr "Sociale Titel"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:221
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:248
 msgid "Social Subheading"
 msgstr "Sociale Ondertitel"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:225
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:252
 msgid "Social Link 1"
 msgstr "Sociale Link 1"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:231
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:258
 msgid "Social Link 2"
 msgstr "Sociale Link 2"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:237
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:264
 msgid "Social Link 3"
 msgstr "Sociale Link 3"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:243
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:255
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:270
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:282
 msgid "Social Link 4"
 msgstr "Sociale Link 4"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:249
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:276
 msgid "Social Link 5"
 msgstr "Sociale Link 5"
 
-#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:264
+#: /Users/obos/docker/netural_wordpress/themes/wp-helios/theme-options.php:291
 msgid "Save Options"
 msgstr "Bewaar Opties"

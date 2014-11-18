@@ -124,10 +124,6 @@ ul.icons {
     background-color: rgba(70,67,66,0.5) !important;
 }
 
-#nav>ul>li>a:hover {
-    color: #fff !important;
-}
-
 hr {
     clear: both;
 }

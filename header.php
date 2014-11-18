@@ -43,6 +43,20 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 				background: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;
                 color: #fff !important;
 			}
+            <?php if (!empty($wphelios_theme_options['menu-color'])) : ?>
+            #nav {
+                background: rgba(<?=hex2rgb($wphelios_theme_options['menu-color'])?>,0.5) !important;
+                padding: .5em 0 .5em 0 !important;
+            }
+            <?php endif; ?>
+            <?php if (!empty($wphelios_theme_options['text-color'])) : ?>
+            #header header {
+                color: <?php echo $wphelios_theme_options['text-color']; ?> !important;
+            }
+            <?php endif; ?>
+            #nav>ul>li>a:hover {
+                color: <?php echo $wphelios_theme_options['color']; ?> !important;
+            }
 			.dropotron li:hover
 			{
 				color: rgba(<?=hex2rgb($wphelios_theme_options['color'])?>,0.75) !important;

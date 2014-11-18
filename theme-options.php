@@ -93,7 +93,19 @@ function wphelios_theme_options_do_page() {
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Color', 'wphelios' ); ?></label></td>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[menu-color]"><?php _e( 'Menu Color', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[menu-color]" class="color-field" type="text" name="wphelios_theme_options[menu-color]" value="<?php echo $options['menu-color']; ?>" data-default-color="#000" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[text-color]"><?php _e( 'Text Color', 'wphelios' ); ?></label></td>
+                        <td>
+                            <input id="wphelios_theme_options[text-color]" class="color-field" type="text" name="wphelios_theme_options[text-color]" value="<?php echo $options['text-color']; ?>" data-default-color="#000" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><label class="description" for="wphelios_theme_options[color]"><?php _e( 'Button Color', 'wphelios' ); ?></label></td>
                         <td>
                             <input id="wphelios_theme_options[color]" class="color-field" type="text" name="wphelios_theme_options[color]" value="<?php echo $options['color']; ?>" data-default-color="#00749a" />
                         </td>
