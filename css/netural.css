@@ -26,7 +26,7 @@ body {
     width: 14em !important;
 }
 
-.post_thumbnail, .carousel .post_thumbnail {
+.post_thumbnail {
     width: 288px;
     height: 288px;
     overflow: hidden;
@@ -41,8 +41,9 @@ body {
     margin-top: 0;
 }
 
-.carousel .post_thumbnail img {
+.post_thumbnail img {
     min-height: 288px;
+    width: 100%;
 }
 
 header>p {
