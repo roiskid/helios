@@ -25,9 +25,10 @@
     <?php the_content(); ?>
 
     <?php $url = get_post_meta( get_the_ID(), 'url', true ); ?>
+    <?php $height = get_post_meta( get_the_ID(), 'height', true ); ?>
 
     <?php if( !empty( $url ) ) : ?>
-        <iframe src="<?=$url;?>"></iframe>
+        <iframe src="<?=$url;?>" style="height: <?=$height;?>px !important;"></iframe>
     <?php endif; ?>
 
 	<footer></footer>
