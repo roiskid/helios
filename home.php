@@ -37,6 +37,8 @@ get_header(); ?>
                     $args = array(
                     'cat' => $cats_selected,
                     'post_type' => array( 'post', 'page' ),
+                    'orderby' => 'menu_order',
+                    'order' => 'asc',
                     'posts_per_page' => -1);
                     query_posts( $args );
 
