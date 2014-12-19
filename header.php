@@ -111,7 +111,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 		</style>
 	</head>
 
-	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?>>
+	<body <?php if( is_home() ) : body_class('homepage'); else: body_class(); endif; ?> style="display: none;">
 		<!-- Header -->
 			<div id="header"<?php if (!empty($wphelios_theme_options['header-img'])) : ?> style="background-image: url('<?php echo $wphelios_theme_options['header-img']; ?>');"<?php endif; ?>>
 				<!-- Inner -->

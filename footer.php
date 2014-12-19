@@ -116,12 +116,15 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 <?php if( !empty($wphelios_theme_options['header-vid'])) : ?>
 <script>
     $(function() {
+        $("body").show();
         height = $(window).height();
         $(".video-container").css({"height": height});
         $('#header .overlay').html('<div class="video-container"><iframe src="https://www.youtube.com/embed/<?=$wphelios_theme_options['header-vid'];?>?autoplay=1&controls=0&showinfo=0&autohide=1" frameborder="0" width="1920px" height="1080px"></iframe></div>');
     });
 </script>
 <?php endif; ?>
+
+<script>$("body").show();</script>
 
 </body>
 </html>
