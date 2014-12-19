@@ -124,7 +124,10 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' );
 </script>
 <?php endif; ?>
 
-<script>$("body").show();</script>
+<script>$(function() {
+    $("body").show();
+});
+</script>
 
 </body>
 </html>
