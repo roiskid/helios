@@ -96,6 +96,11 @@ div.container hr:first-child {
     display: none;
 }
 
+.carousel {
+    height: 521px !important;
+    background-color: #ccc !important;
+}
+
 .carousel article {
     display: inline-table !important;
 }
