@@ -36,6 +36,9 @@
             var b = j[a];
             p.moveTo(b.x, b.y), p.arc(b.x, b.y, b.size, 0, 2 * Math.PI, !0)
         }
+        if ($("canvas.snow").parent().prop("tagName") !== 'BODY') {
+            $("canvas.snow").detach().prependTo('body');
+        }
         p.fill(), g(), requestAnimationFrame(e)
     }
 
