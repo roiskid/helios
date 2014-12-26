@@ -168,8 +168,11 @@ add_action( 'admin_init', 'wphelios_page_cats_and_tags' );
  * @since WP-Helios 1.0
  */
 function wphelios_enqueue_scripts() {
-    wp_enqueue_script( 'wp-helios', get_template_directory_uri() . '/js/wp-helios.min.js', array(), null, true );
-    wp_enqueue_script( 'init', get_template_directory_uri() . '/js/init.min.js', array('wp-helios'), null, true );
+    wp_enqueue_script('wp-helios', get_template_directory_uri() . '/js/wp-helios.min.js', array('jquery'), null, true );
+    wp_enqueue_script('init', get_template_directory_uri() . '/js/init.min.js', array('wp-helios'), null, true );
+    if (date('md') >= '1224' || date('md') < '0201') {
+        wp_enqueue_script('snow', get_template_directory_uri() . '/js/snow.js', array('wp-helios'), null, true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'wphelios_enqueue_scripts' );
 
