@@ -16,6 +16,7 @@ $wphelios_theme_options = get_option( 'wphelios_theme_options' ); ?>
     <meta name="keywords" content="">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/netural-facebook.css" />
 </head>
 <body>
 
