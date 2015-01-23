@@ -88,6 +88,10 @@ section, article {
     padding-top: 3em;
 }
 
+.byline {
+    display: none;
+}
+
 #comments {
     margin-top: 3em;
 }
