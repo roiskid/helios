@@ -34,7 +34,11 @@
 
         <?php
         if ( is_home() ) :
-            the_excerpt();
+            if (has_excerpt($post->ID)) {
+                the_excerpt();
+            } else {
+                the_content();
+            }
         else :
             the_content();
         endif;
