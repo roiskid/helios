@@ -30,8 +30,9 @@ body {
     height: 288px;
     overflow: hidden;
     float: right;
-    margin-left: 2em;
+    margin-left: 4em;
     margin-bottom: 2em;
+    margin-right: 2em;
 }
 
 .carousel .post_thumbnail {
@@ -114,6 +115,10 @@ div.container hr:first-child {
 
 .widget ul li {
     margin-bottom: 1em;
+}
+
+.textwidget img:nth-child(2) {
+    margin-left: 80px;
 }
 
 #footer {
