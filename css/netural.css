@@ -117,8 +117,9 @@ div.container hr:first-child {
     margin-bottom: 1em;
 }
 
-.textwidget img:nth-child(2) {
-    margin-left: 80px;
+.textwidget img {
+    margin-right: 6%;
+    margin-bottom: 6%;
 }
 
 #footer {
